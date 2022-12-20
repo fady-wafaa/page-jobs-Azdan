@@ -6,28 +6,59 @@ const { useState ,useEffect } = React ;
 const LinkOpenJob = () =>{
 
     return(
-
-        <div className="job-list">
         
-                
+        
+        <React.Fragment>
+            
                   
         <a  className="heading show" data-portal-title="seniorfinancialanalyst" data-portal-location="Cairo, Egypt" data-portal-job-type="2" data-portal-remote-location="false">
            
-            <div className="info d-flex justify-content-between align-content-center flex-nowrap">
-              <div className="jobInfo">
-                <div className="job_title">Senior Financial Analyst</div>
+            <div className="info d-flex justify-content-between align-content-center flex-nowrap col-12">
+
+              <div className="jobInfo col-8">
+                <div className="job_title">ERP Project Manager </div>
 
                 <div className="job_desc">
-                  The Financial analyst is responsible for tracking Azdan's financial performance against a plan, analyzing business performance and market conditions to create forecasts, and helping senior management ...
+                Job Summary Azdan ERP Project manager develops, plans,
+                 and implements successful planning and execution of Oracle NetSuite project, he/she makes decisions that directly benefit the project, contr...
                 </div>
 
               </div>
 
-              <div className="job-location">
+              <div className="job-location col-2">
                 <div className="location-info">
-                  
+                Remote
                     
-                      Cairo, Cairo Governorate
+                  <br />
+                  Full Time
+                </div>
+
+                <div className="location-icon">
+                <i class="fas fa-chevron-right"></i>
+                </div>
+
+              </div>
+
+            </div>
+        </a>
+
+        <a  className="heading show" data-portal-title="seniorfinancialanalyst" data-portal-location="Cairo, Egypt" data-portal-job-type="2" data-portal-remote-location="false">
+           
+            <div className="info d-flex justify-content-between align-content-center flex-nowrap col-12">
+
+              <div className="jobInfo col-8">
+                <div className="job_title">NetSuite Principle Consultant (Remote)</div>
+
+                <div className="job_desc">
+                Job Summary  The role of the NetSuite Principle Consultant understands solutions,
+                 industry best practices, multiple business processes, or technology designs within a product/technology fam...
+                </div>
+
+              </div>
+
+              <div className="job-location col-2">
+                <div className="location-info">
+                Remote
                     
                   <br />
                   Full Time
@@ -42,12 +73,23 @@ const LinkOpenJob = () =>{
             </div>
         </a>
       
+        <div class="no-jobs-found" data-portal-id="no_data" >
+                <div class="no-jobs-icon">
+                 <i class="icon-my-job"></i> 
+                <i class="fas fa-briefcase "></i>
+                </div>
+                <div class="not-found-title">No jobs found</div>
+                <p>Oops, you have no jobs that match the filter conditions.</p>
+                <p>Try refining your search.</p>
+      </div>
+
+            </React.Fragment>
+                
     
       
     
       
     
-  </div>
     )
 }
 
@@ -63,7 +105,7 @@ const OneJob = () => {
             <div className="role-title">
            
               <h5>
-                Finance
+              Service Delivery
                 {/* <span className="mobile-role-count">
                    <span data-portal-id="mobile-jobs-count">1</span>
                   <span data-portal-job-count="single-job">Open Role</span>
@@ -71,13 +113,16 @@ const OneJob = () => {
                 </span> */}
               </h5>
               <div className="role-count">
-                <span className="jobs-count pl-1 pr-2">1</span>
+                <span className="jobs-count pl-1 pr-2">2</span>
                 {/* <span data-portal-job-count="single-job">Open Role</span> */}
                 <span className="multiple-job" >Open Roles</span>
               </div>
             </div>
+            <div className="job-list">
 
                 <LinkOpenJob />
+                {/* <LinkOpenJob /> */}
+            </div>
 
             </li>
 
@@ -95,7 +140,7 @@ const ContainerUl = () => {
 
                 <ul className="ul">
                     <OneJob />
-                    <OneJob />
+                    {/* <OneJob /> */}
                 </ul>
             </div>
     </React.Fragment>
@@ -106,7 +151,48 @@ const ContainerUl = () => {
 //! =================>> Positions <==================
 const Positions = () =>{
 
-    let [checkTgg ,setCheckTgg] = useState(true)
+    let [checkTgg ,setCheckTgg] = useState(true);
+
+    const cliekclearBtn = (e) =>{
+        let check = [...document.querySelectorAll(`.selection__clear`)].filter(el => el.getAttribute("data-select-id") == e.currentTarget.getAttribute("data-select-id"));
+        // console.log(check.map(e => e.getAttribute("data-select-id")))
+        let getValueAttr = check.map(e => e.getAttribute("data-select-id"))
+
+        if(getValueAttr == 1){
+            document.querySelector(`.sele1 .selection__clear`).classList.remove("show");
+            document.querySelector(`.sele1 input`).value=``;
+            document.querySelector(`.sele1 ul`).classList.add("noShow");
+            [...document.querySelectorAll(`.sele1  .icon-tick`)].filter(el => el.classList.remove("show"));
+            [...document.querySelectorAll(`.sele1  ul li h3`)].filter(el => 
+                [
+                    el.classList.remove("font-weight-bold"),
+                    el.style.fontSize = "0.78vw",
+                    el.style.color = "rgba(0, 0, 0, 0.602)"
+                ]);
+        }else if(getValueAttr == 2){
+            document.querySelector(`.sele2 .selection__clear`).classList.remove("show");
+            document.querySelector(`.sele2 input`).value=``;
+            document.querySelector(`.sele2 ul`).classList.add("noShow");
+            [...document.querySelectorAll(`.sele2  .icon-tick`)].filter(el => el.classList.remove("show"));
+            [...document.querySelectorAll(`.sele2  ul li h3`)].filter(el => 
+                [
+                    el.classList.remove("font-weight-bold"),
+                    el.style.fontSize = "0.78vw",
+                    el.style.color = "rgba(0, 0, 0, 0.602)"
+                ]);
+        }else if(getValueAttr == 3){
+            document.querySelector(`.sele3 .selection__clear`).classList.remove("show");
+            document.querySelector(`.sele3 input`).value=``;
+            document.querySelector(`.sele3 ul`).classList.add("noShow");
+            [...document.querySelectorAll(`.sele3  .icon-tick`)].filter(el => el.classList.remove("show"));
+            [...document.querySelectorAll(`.sele3  ul li h3`)].filter(el => 
+                [
+                    el.classList.remove("font-weight-bold"),
+                    el.style.fontSize = "0.78vw",
+                    el.style.color = "rgba(0, 0, 0, 0.602)"
+                ]);
+        }
+    }
 
     // ! Arow input <====
     const hindlerArowInp =(clas)=>{
@@ -122,6 +208,50 @@ const Positions = () =>{
         }
     }
 
+    // ! ====> falter input <======
+    const valueSelect = (e) =>{
+ 
+        // console.log(e.currentTarget)
+        
+        if(!e.currentTarget.querySelector(".icon-tick").classList.contains("show")){
+            e.currentTarget.querySelector(".icon-tick").classList.add("show");
+            e.currentTarget.querySelector("h3").classList.add("font-weight-bold");
+            e.currentTarget.querySelector("h3").style.fontSize = "0.9vw"
+            e.currentTarget.querySelector("h3").style.color = "rgba(0, 0, 0)"
+        }else{
+          
+            e.currentTarget.querySelector(".icon-tick").classList.remove("show");
+            e.currentTarget.querySelector("h3").classList.remove("font-weight-bold");
+            e.currentTarget.querySelector("h3").style.fontSize = "0.78vw"
+            e.currentTarget.querySelector("h3").style.color = "rgba(0, 0, 0, 0.602)";
+        }
+
+        let trgetClass = e.nativeEvent.path[2].classList[0];
+        let check = [...document.querySelectorAll(`.${trgetClass} .icon-tick`)].filter(el => el.classList.contains("show"));
+        let inputTrget = document.querySelector(`.${trgetClass} input`)
+        if(check.length > 0){
+            if(trgetClass == "sele1"){
+                
+                inputTrget.value = `Department (${check.length})`;
+                document.querySelector(`.${trgetClass} .selection__clear`).classList.add("show")
+            }else if(trgetClass == "sele2"){
+                inputTrget.value = `Work Type  (${check.length})`;
+                document.querySelector(`.${trgetClass} .selection__clear`).classList.add("show")
+            }else if(trgetClass == "sele3"){
+                inputTrget.value = `Location (${check.length})`;
+                document.querySelector(`.${trgetClass} .selection__clear`).classList.add("show")
+
+                }
+
+            inputTrget.style.color = "#000"
+
+        }else{
+            inputTrget.value = ``;
+            document.querySelector(`.${trgetClass} .selection__clear`).classList.remove("show")
+        }
+
+
+    }
 
          // ! ****************===> function toggle BTN <===*****************
     const buttonRomtle = (e) =>{
@@ -135,12 +265,30 @@ const Positions = () =>{
                     [...document.querySelectorAll(".selInp")].map(e =>
                         [ e.classList.add("col-6"),
                             e.style.paddingLeft= 0,
-                            e.querySelector("input").value=""]
+                            e.querySelector("input").value="",
+                            e.querySelector("ul").classList.add("noShow"),
+                            e.querySelector(".selection__clear").classList.remove("show"),
+                            e.querySelector(".icon-tick").classList.remove("show"),
+                            e.querySelector("li h3").style.fontSize = "0.78vw",
+                            e.querySelector("li h3").classList.remove("font-weight-bold"),
+                            e.querySelector("li h3").style.color = "rgba(0, 0, 0, 0.602)",
+                        ]
                          )
                     document.querySelector(".AllSelect").classList.remove("pl-1")
                     document.querySelector(".AllSelect").classList.add("pl-0")
                 } else{
-                    [...document.querySelectorAll(".selInp")].map(e => e.querySelector("input").value="" )  ;
+                    [...document.querySelectorAll(".selInp")].map(e =>
+                        [ e.classList.add("col-6"),
+                            e.style.paddingLeft= 0,
+                            e.querySelector("ul").classList.add("noShow"),
+                            e.querySelector("input").value="",
+                            e.querySelector(".selection__clear").classList.remove("show"),
+                            e.querySelector(".icon-tick").classList.remove("show"),
+                            e.querySelector("li h3").style.fontSize = "0.78vw",
+                            e.querySelector("li h3").classList.remove("font-weight-bold"),
+                            e.querySelector("li h3").style.color = "rgba(0, 0, 0, 0.602)",
+                        ]
+                         )
                     document.querySelector(".AllSelect").classList.remove("pl-0")
                     document.querySelector(".AllSelect").classList.add("pl-1")
                     document.querySelector("#clear-text").style.display = "none";
@@ -152,7 +300,7 @@ const Positions = () =>{
             return setCheckTgg(!checkTgg);
         
      }
-     
+
         // ! ****************===> function Clean Button <===*****************
      const CleanButton = () =>{
         document.querySelector(".AllSelect").classList.remove("pl-0")
@@ -174,21 +322,21 @@ const Positions = () =>{
                     <h3 >Open Positions</h3>
                 </div>
 
-                <div className="container d-flex justify-content-center align-content-center p-0 mt-4 mb-3 flex-lg-row flex-md-column flex-sm-column">
+                <div className="container col-12 d-flex justify-content-start align-content-center p-0 mt-4 mb-3 flex-row flex-lg-row flex-md-column  flex-sm-column">
 
-                    <div className="AllSelect col-md-12 col-sm-12  col-lg-9 pl-0">
+                    <div className="AllSelect  col-md-12  col-lg-9 pl-0 flex-md-row flex-sm-nowrap  flex-lg-nowrap">
 
-                        <div className="select1 selInp ">
+                        <div className="sele1 select1 selInp mt-md-0  mr-2 px-0 mt-sm-2">
 
-                        <span className="arow Amaro"></span>
-                    
-                                <input placeholder="Choose Department" onClick={()=> hindlerArowInp(".select1")}  type="search"  name="" id="department" className="department" />
+                              <span className="arow Amaro"></span>
+                               <span onClick={(e)=>cliekclearBtn(e)} className="select1-selection__clear selection__clear" title="Remove all items" data-select-id="1">×</span>
+                                <input placeholder="Choose Department" onClick={()=> hindlerArowInp(".select1")}  type="text"  name="" id="department" className="department pl-3" />
 
-                                <ul className="noShow">
+                                <ul  className="sele1 noShow">
 
                             
-                                    <li value="1">
-                                         <h3>All</h3>
+                                    <li onClick={ (e) => valueSelect(e)}  value="1">
+                                         <h3 >All</h3>
                                          <span class="icon-tick">
                                             <svg width="16" height="12"viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M2.18005 6.17997L5.18005 9.32997L14.1501 0.869974C14.4801 0.539973 15.0201 0.569974 15.3501 0.899974C15.68011.22997 15.6501 1.76997 15.3201 2.09997L5.72005 11.13C5.39005 11.46 4.85005 11.43 4.52005 11.1L0.950052 7.31997C0.6200526.98997 0.650052 6.44997 0.980052 6.11997C1.34005 5.81997 1.85005 5.81997 2.18005 6.17997Z"
@@ -197,7 +345,7 @@ const Positions = () =>{
                                             </svg>
                                         </span>
                                          </li>
-                                    <li value="2">
+                                    <li onClick={ (e) => valueSelect(e)} value="2">
                                         <h3>Finance</h3>
                                         <span class="icon-tick">
                                             <svg viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -207,7 +355,7 @@ const Positions = () =>{
                                             </svg>
                                         </span>
                                      </li>
-                                    <li value="3">
+                                    <li onClick={ (e) => valueSelect(e)} value="3">
                                         <h3>Service Delivery</h3>
                                         <span class="icon-tick">
                                             <svg viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -220,15 +368,16 @@ const Positions = () =>{
                                 </ul>
                         </div>
 
-                        <div className="select2 selInp">
+                        <div className="sele2 select2 selInp m-md-0 mt-sm-2 w-auto   mr-2 px-0">
                                 <span className="arow Amaro"></span>
-                                
-                                            <input placeholder="Choose Work Type" onClick={()=> hindlerArowInp(".select2")} type="search"   name="" id="working" className="working" />
+                                          <span onClick={ (e) => cliekclearBtn(e)} className="select2-selection__clear selection__clear" title="Remove all items" data-select-id="2">×</span>
 
-                                            <ul className="noShow">
+                                            <input placeholder="Choose Work Type" onClick={()=> hindlerArowInp(".select2")} type="text"   name="" id="working" className="working pl-3" />
+
+                                            <ul className="sele2 noShow">
 
 
-                                                <li  value="1">
+                                                <li onClick={ (e) => valueSelect(e)}  value="1">
                                                     <h3>Full Time</h3>
                                                     <span class="icon-tick">
                                                         <svg  viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -244,14 +393,16 @@ const Positions = () =>{
                             
                         </div>
 
-                        <div className="select3 selInp">
+                        <div className="sele3 select3 selInp m-md-0 mt-sm-2    mr-2 pr-0 pl-md-2 pl-sm-0">
                         <span className="arow Amaro"></span>
-                                <input placeholder="Choose Location" onClick={()=> hindlerArowInp(".select3")}  type="search"  name="" id="location" className="location" />
 
-                                <ul className="noShow" style={{zIndex:9}}>
+                                <span onClick={ (e) => cliekclearBtn(e)} className="select3-selection__clear selection__clear" title="Remove all items" data-select-id="3">×</span>
+                                <input placeholder="Choose Location" onClick={()=> hindlerArowInp(".select3")}  type="text"  name="" id="location" className="location pl-3" />
+
+                                <ul className="sele3 noShow" style={{zIndex:9}}>
 
                             
-                                    <li  value="1">
+                                    <li onClick={ (e) => valueSelect(e)}   value="1">
                                         <h3>Cairo,Egypt</h3>
                                         <span class="icon-tick ">
                                             <svg  viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -270,12 +421,12 @@ const Positions = () =>{
 
                     </div>
 
-                    <div className="toggle-and-clear col-lg-3 col-md-12 col-sm-12 ml-3">
+                    <div className="toggle-and-clear col-xl-3 col-lg-2 col-md-12 col-sm-12 ml-3 justify-content-sm-start justify-content-md-start p-0 mt-lg-0 mt-sm-2">
 
-                        <div className="remote-toggle">
-                            <span className="mt-md-2 mt-sm-2 mt-lg-1">Remote Only</span>
+                        <div className="remote-toggle col-xl-5  col-lg-8 col-md-6 col-sm-6 p-0">
+                            <span className="mt-md-2 mt-sm-2 mt-lg-1 col-xl-10 col-lg-8 col-md-7 p-0 ">Remote Only</span>
 
-                            <div className="toggle-switch">
+                            <div className="toggle-switch  col-lg-5 p-0 col-md-5">
                                 <input name=" [remote]" type="hidden" value="0"/>
                                 <input onClick={(e) =>buttonRomtle(e) } className="toggle-btn" type="checkbox" value="1"name=" [remote]" id="_remote" />
                                 <label for="toggle-btn"></label>
@@ -283,7 +434,7 @@ const Positions = () =>{
 
                         </div>
 
-                            <div className="clear-text" id="clear-text" >
+                            <div className="clear-text ml-xl-4 col-xl-3 col-md-3 p-0 ml-1" id="clear-text" >
                                 <button onClick={() => CleanButton()} >Clean</button>
                             </div>
                             

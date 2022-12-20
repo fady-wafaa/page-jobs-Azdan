@@ -62,8 +62,6 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   height: 7vh;
-  width: 80%;
-  max-width: 77% !important;
 }
 .AllSelect .select1 {
   width: 16.5vw;
@@ -73,7 +71,7 @@ a {
 .AllSelect .select1 .Amaro {
   position: relative !important;
   top: 0;
-  left: 100%;
+  left: 98%;
   height: 10px;
   width: 10px;
 }
@@ -83,10 +81,11 @@ a {
   border-color: #888 transparent transparent transparent;
   border-style: solid;
   border-width: 5px 4px 0 4px;
-  right: 12px;
+  right: 4px;
   margin-top: -2px;
-  top: 50%;
+  top: 70%;
   cursor: pointer;
+  transform: translate(-50%, -50%);
 }
 .AllSelect .select1 .openInput {
   position: relative !important;
@@ -138,6 +137,7 @@ a {
   background-color: white;
 }
 .AllSelect .select1 ul li {
+  cursor: pointer;
   list-style: none;
   padding: 15px;
   color: rgba(0, 0, 0, 0.602);
@@ -173,7 +173,7 @@ a {
 .AllSelect .select2 .Amaro {
   position: relative !important;
   top: 0;
-  left: 100%;
+  left: 98%;
   height: 10px;
   width: 10px;
 }
@@ -183,10 +183,11 @@ a {
   border-color: #888 transparent transparent transparent;
   border-style: solid;
   border-width: 5px 4px 0 4px;
-  right: 12px;
+  right: 4px;
   margin-top: -2px;
-  top: 50%;
+  top: 70%;
   cursor: pointer;
+  transform: translate(-50%, -50%);
 }
 .AllSelect .select2 .openInput {
   position: relative !important;
@@ -238,6 +239,7 @@ a {
   background-color: white;
 }
 .AllSelect .select2 ul li {
+  cursor: pointer;
   list-style: none;
   padding: 15px;
   color: rgba(0, 0, 0, 0.602);
@@ -273,7 +275,7 @@ a {
 .AllSelect .select3 .Amaro {
   position: relative !important;
   top: 0;
-  left: 100%;
+  left: 98%;
   height: 10px;
   width: 10px;
 }
@@ -283,10 +285,11 @@ a {
   border-color: #888 transparent transparent transparent;
   border-style: solid;
   border-width: 5px 4px 0 4px;
-  right: 12px;
+  right: 4px;
   margin-top: -2px;
-  top: 50%;
+  top: 70%;
   cursor: pointer;
+  transform: translate(-50%, -50%);
 }
 .AllSelect .select3 .openInput {
   position: relative !important;
@@ -338,6 +341,7 @@ a {
   background-color: white;
 }
 .AllSelect .select3 ul li {
+  cursor: pointer;
   list-style: none;
   padding: 15px;
   color: rgba(0, 0, 0, 0.602);
@@ -366,8 +370,23 @@ a {
   display: none;
 }
 .AllSelect .selInp {
-  width: 32.5%;
-  height: 6vh;
+  width: 32.5% !important;
+  height: 5.5vh !important;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.AllSelect .selInp span[data-select-id="1"], .AllSelect .selInp span[data-select-id="2"], .AllSelect .selInp span[data-select-id="3"] {
+  display: none;
+  position: absolute;
+  top: 48%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+  font-size: 1vw;
+  font-weight: 700;
+  opacity: 0.9;
+  cursor: pointer;
+  z-index: 99;
 }
 
 .toggle-and-clear {
@@ -376,20 +395,17 @@ a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 0 !important;
 }
 .toggle-and-clear .remote-toggle {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   width: 50%;
 }
 .toggle-and-clear .remote-toggle span {
-  font-size: 0.83vw;
+  font-size: 0.9vw !important;
   font-family: "Roboto";
   font-weight: 400;
-  text-align: center;
-  width: 80%;
+  text-align: start;
 }
 .toggle-and-clear .remote-toggle .toggle-switch {
   width: 20%;
@@ -468,7 +484,7 @@ a {
   color: #73469B;
   vertical-align: middle;
   font-family: "Roboto";
-  font-size: 0.9vw;
+  font-size: 1vw;
   font-weight: 600;
   background: none;
   border: none;
@@ -522,6 +538,7 @@ a {
   padding: 15px 0;
   list-style: none;
   border-top: 1px solid #e6e6e6 !important;
+  cursor: pointer;
 }
 .ul li .role-title {
   margin: -20px 0 0;
@@ -579,7 +596,7 @@ a {
 .ul li .job-list .heading .info .jobInfo .job_desc {
   color: #333 !important;
   text-decoration: none !important;
-  font-size: 0.85vw !important;
+  font-size: 0.8vw !important;
   font-family: "Roboto";
 }
 .ul li .job-list .heading .info .job-location {
@@ -606,4 +623,54 @@ a {
 }
 .ul li .job-list .heading .info .job-location .location-icon I {
   color: #7b40a0;
+}
+
+.no-jobs-found {
+  display: none;
+  text-align: center;
+  margin-top: 36px;
+}
+.no-jobs-found .no-jobs-icon {
+  margin: 0 auto;
+  padding: 32px;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  font-size: 36px;
+  color: #79888E;
+}
+.no-jobs-found .not-found-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 24px 0 8px 0;
+}
+.no-jobs-found p {
+  margin: 0 0 10px;
+  font-size: 13px !important;
+  line-height: 1.42857;
+  font-family: "Roboto";
+  color: #333;
+}
+
+@media only screen and (max-width: 2560px) {
+  .toggle-and-clear .remote-toggle span {
+    font-size: 0.75vw !important;
+  }
+  .clear-text button {
+    font-size: 0.75vw !important;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .toggle-and-clear .remote-toggle span {
+    font-size: 1vw !important;
+  }
+  .clear-text button {
+    font-size: 1vw !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .toggle-and-clear .remote-toggle span {
+    font-size: 1.2vw !important;
+  }
 }/*# sourceMappingURL=styles.css.map */
