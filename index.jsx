@@ -148,6 +148,8 @@ const ContainerUl = () => {
 }
 
 
+
+
 //! =================>> Positions <==================
 const Positions = () =>{
 
@@ -155,10 +157,11 @@ const Positions = () =>{
 
     const cliekclearBtn = (e) =>{
         let check = [...document.querySelectorAll(`.selection__clear`)].filter(el => el.getAttribute("data-select-id") == e.currentTarget.getAttribute("data-select-id"));
-        // console.log(check.map(e => e.getAttribute("data-select-id")))
+        console.log(check.map(e => e.getAttribute("data-select-id")))
         let getValueAttr = check.map(e => e.getAttribute("data-select-id"))
 
         if(getValueAttr == 1){
+     
             document.querySelector(`.sele1 .selection__clear`).classList.remove("show");
             document.querySelector(`.sele1 input`).value=``;
             document.querySelector(`.sele1 ul`).classList.add("noShow");
@@ -196,16 +199,27 @@ const Positions = () =>{
 
     // ! Arow input <====
     const hindlerArowInp =(clas)=>{
+        // let chekUl =  [...document.querySelectorAll(".selInp ul")].filter( e => e != document.querySelector(`${clas} ul`) ) 
+        // chekUl.map(e => e.classList.add("noShow"))
+        // let chekUl2 =  [...document.querySelectorAll(".selInp ul")].filter( e => e == document.querySelector(`${clas} ul`) ) 
+        // chekUl2.map(e => e.classList.remove("noShow"))
+        
+        
         if(! document.querySelector(`${clas} .arow`).classList.contains("openInput")){
+           
+   
+            document.querySelector(`${clas} .arow`).classList.remove("Amaro");
+            document.querySelector(`${clas} .arow`).classList.add("openInput");
+     
 
-            document.querySelector(`${clas} .arow`).classList.remove("Amaro")
-            document.querySelector(`${clas} .arow`).classList.add("openInput")
-            document.querySelector(`${clas} ul`).classList.remove("noShow")
-        }else{
-            document.querySelector(`${clas} ul`).classList.add("noShow")
+    }else{
+         
             document.querySelector(`${clas} .arow`).classList.add("Amaro")
             document.querySelector(`${clas} .arow`).classList.remove("openInput")
         }
+
+
+      
     }
 
     // ! ====> falter input <======
@@ -230,11 +244,60 @@ const Positions = () =>{
         let check = [...document.querySelectorAll(`.${trgetClass} .icon-tick`)].filter(el => el.classList.contains("show"));
         let inputTrget = document.querySelector(`.${trgetClass} input`)
         if(check.length > 0){
+
             if(trgetClass == "sele1"){
-                
-                inputTrget.value = `Department (${check.length})`;
-                document.querySelector(`.${trgetClass} .selection__clear`).classList.add("show")
+               
+                let checkLI = e.currentTarget.value;
+            
+            if( checkLI == 1){
+
+                if(  document.querySelector(`.${trgetClass} ul li h3`).classList.contains("font-weight-bold")){
+
+                    inputTrget.value = `Department (${2})`;
+                [...document.querySelectorAll(`.${trgetClass} ul li `)].map(e => 
+                    [
+                        e.querySelector("h3").classList.add("font-weight-bold"),
+                        e.querySelector("h3").style.fontSize = "0.9vw",
+                        e.querySelector("h3").style.color = "rgba(0, 0, 0)",
+                        e.querySelector(".icon-tick").classList.add("show")
+                    ]
+                    
+                    )
+                }else {
+                    inputTrget.value = ``;
+                    [...document.querySelectorAll(`.${trgetClass} ul li `)].map(e => 
+                        [
+                            e.querySelector("h3").classList.remove("font-weight-bold"),
+                            e.querySelector("h3").style.fontSize =  "0.78vw",
+                            e.querySelector("h3").style.color = "rgba(0, 0, 0, 0.602",
+                            e.querySelector(".icon-tick").classList.remove("show")
+                        ]
+                        
+                        )
+                }
+            }else if(checkLI == e.currentTarget.value){
+                [...document.querySelectorAll(`.${trgetClass} ul li `)].map(e => 
+                    [
+                        e.querySelector(".icon-tick").classList.remove("show"),
+                        inputTrget.value = ``,
+                        e.querySelector("h3").classList.remove("font-weight-bold"),
+                        e.querySelector("h3").style.fontSize =  "0.78vw",
+                        e.querySelector("h3").style.color = "rgba(0, 0, 0, 0.602",
+                    ]
+                    
+                    )
+                    e.currentTarget.querySelector(".icon-tick").classList.add("show");
+                    e.currentTarget.querySelector("h3").classList.add("font-weight-bold");
+                    e.currentTarget.querySelector("h3").style.fontSize = "0.9vw"
+                    e.currentTarget.querySelector("h3").style.color = "rgba(0, 0, 0)"
+                    inputTrget.value = `Department (${1 })`
+            }
+            // else{
+
+            // }
+                // document.querySelector(`.${trgetClass} .selection__clear`).classList.add("show")
             }else if(trgetClass == "sele2"){
+                
                 inputTrget.value = `Work Type  (${check.length})`;
                 document.querySelector(`.${trgetClass} .selection__clear`).classList.add("show")
             }else if(trgetClass == "sele3"){
@@ -262,33 +325,45 @@ const Positions = () =>{
                     
                     document.querySelector(".select3").style.display = "none";
                     document.querySelector("#clear-text").style.display = "block";
-                    [...document.querySelectorAll(".selInp")].map(e =>
-                        [ e.classList.add("col-6"),
-                            e.style.paddingLeft= 0,
-                            e.querySelector("input").value="",
-                            e.querySelector("ul").classList.add("noShow"),
-                            e.querySelector(".selection__clear").classList.remove("show"),
-                            e.querySelector(".icon-tick").classList.remove("show"),
-                            e.querySelector("li h3").style.fontSize = "0.78vw",
-                            e.querySelector("li h3").classList.remove("font-weight-bold"),
-                            e.querySelector("li h3").style.color = "rgba(0, 0, 0, 0.602)",
+                    [...document.querySelectorAll(".selInp")].map(el =>
+                        [ el.classList.add("col-6"),
+                            el.style.paddingLeft= 0,
+                            el.querySelector("input").value="",
+                            el.querySelector("ul").classList.add("noShow"),
+                            el.querySelector(".selection__clear").classList.remove("show"),
+                        
                         ]
-                         )
+                         );
+                         [...document.querySelectorAll(".selInp ul li")].map(el => 
+                            [
+                                el.querySelector(" .icon-tick").classList.remove("show"),
+                                el.querySelector(" h3").style.fontSize = "0.78vw",
+                                el.querySelector(" h3").classList.remove("font-weight-bold"),
+                                el.querySelector(" h3").style.color = "rgba(0, 0, 0, 0.602)",
+                            ]
+                            
+                           )
                     document.querySelector(".AllSelect").classList.remove("pl-1")
                     document.querySelector(".AllSelect").classList.add("pl-0")
                 } else{
-                    [...document.querySelectorAll(".selInp")].map(e =>
-                        [ e.classList.add("col-6"),
-                            e.style.paddingLeft= 0,
-                            e.querySelector("ul").classList.add("noShow"),
-                            e.querySelector("input").value="",
-                            e.querySelector(".selection__clear").classList.remove("show"),
-                            e.querySelector(".icon-tick").classList.remove("show"),
-                            e.querySelector("li h3").style.fontSize = "0.78vw",
-                            e.querySelector("li h3").classList.remove("font-weight-bold"),
-                            e.querySelector("li h3").style.color = "rgba(0, 0, 0, 0.602)",
+                    [...document.querySelectorAll(".selInp")].map(el =>
+                        [ el.classList.add("col-6"),
+                            el.style.paddingLeft= 0,
+                            el.querySelector("ul").classList.add("noShow"),
+                            el.querySelector("input").value="",
+                            el.querySelector(".selection__clear").classList.remove("show"),
+                    
                         ]
-                         )
+                         );
+                         [...document.querySelectorAll(".selInp ul li")].map(el => 
+                            [
+                                el.querySelector(" .icon-tick").classList.remove("show"),
+                                el.querySelector(" h3").style.fontSize = "0.78vw",
+                                el.querySelector(" h3").classList.remove("font-weight-bold"),
+                                el.querySelector(" h3").style.color = "rgba(0, 0, 0, 0.602)",
+                            ]
+                            
+                           )
                     document.querySelector(".AllSelect").classList.remove("pl-0")
                     document.querySelector(".AllSelect").classList.add("pl-1")
                     document.querySelector("#clear-text").style.display = "none";
@@ -303,14 +378,59 @@ const Positions = () =>{
 
         // ! ****************===> function Clean Button <===*****************
      const CleanButton = () =>{
+         document.querySelector(".AllSelect").classList.remove("pl-0")
+         document.querySelector(".AllSelect").classList.add("pl-1")
+         document.querySelector("#clear-text").style.display = "none";
+         document.querySelector(".select3").style.display = "block";
+         document.querySelector(".toggle-btn").checked = false;
+
+        [...document.querySelectorAll(".selInp")].map(el =>
+            [ el.classList.add("col-6"),
+                el.style.paddingLeft= 0,
+                el.querySelector("ul").classList.add("noShow"),
+                el.querySelector("input").value="",
+                el.querySelector(".selection__clear").classList.remove("show"),
+        
+            ]
+             );
+             [...document.querySelectorAll(".selInp ul li")].map(el => 
+                [
+                    el.querySelector(" .icon-tick").classList.remove("show"),
+                    el.querySelector(" h3").style.fontSize = "0.78vw",
+                    el.querySelector(" h3").classList.remove("font-weight-bold"),
+                    el.querySelector(" h3").style.color = "rgba(0, 0, 0, 0.602)",
+                ]
+                
+               )
         document.querySelector(".AllSelect").classList.remove("pl-0")
         document.querySelector(".AllSelect").classList.add("pl-1")
         document.querySelector("#clear-text").style.display = "none";
         document.querySelector(".select3").style.display = "block";
-        [...document.querySelectorAll(".selInp")].map(e => e.querySelector("input").value="" )  ;
-        [...document.querySelectorAll(".selInp")].map(e => e.classList.remove("col-6"))  
-        document.querySelector(".toggle-btn").checked = false;
+        [...document.querySelectorAll(".selInp")].map(e => e.classList.remove("col-6"))   
+
+      
         return setCheckTgg(!checkTgg);
+     }
+
+    // ! *************** ===>>  function close  ul out mos <<==== ************
+    const closeUl = (e) =>{ e.currentTarget.classList.add("noShow")}
+
+
+     const clickInpCleseUL = (e)=>{
+    
+
+         if(!e.currentTarget.querySelector("ul").classList.contains("noShow")){
+         
+             e.currentTarget.querySelector("ul").classList.add("noShow")
+
+                }
+                else{
+              
+                 let chekUl =  [...document.querySelectorAll(".selInp ul")].filter( el => el == e.currentTarget.querySelector("ul") ) 
+                 chekUl.map(el => el.classList.remove("noShow"))
+        }
+      
+
      }
 
     return(
@@ -326,13 +446,13 @@ const Positions = () =>{
 
                     <div className="AllSelect  col-md-12  col-lg-9 pl-0 flex-md-row flex-sm-nowrap  flex-lg-nowrap">
 
-                        <div className="sele1 select1 selInp mt-md-0  mr-2 px-0 mt-sm-2">
+                        <div onClick={ (e)=>clickInpCleseUL(e)} className="sele1 select1 selInp mt-md-0  mr-2 px-0 mt-sm-2">
 
                               <span className="arow Amaro"></span>
                                <span onClick={(e)=>cliekclearBtn(e)} className="select1-selection__clear selection__clear" title="Remove all items" data-select-id="1">×</span>
                                 <input placeholder="Choose Department" onClick={()=> hindlerArowInp(".select1")}  type="text"  name="" id="department" className="department pl-3" />
 
-                                <ul  className="sele1 noShow">
+                                <ul onMouseLeave={(e)=>closeUl(e)} className="sele1 noShow">
 
                             
                                     <li onClick={ (e) => valueSelect(e)}  value="1">
@@ -345,6 +465,7 @@ const Positions = () =>{
                                             </svg>
                                         </span>
                                          </li>
+
                                     <li onClick={ (e) => valueSelect(e)} value="2">
                                         <h3>Finance</h3>
                                         <span class="icon-tick">
@@ -355,6 +476,7 @@ const Positions = () =>{
                                             </svg>
                                         </span>
                                      </li>
+
                                     <li onClick={ (e) => valueSelect(e)} value="3">
                                         <h3>Service Delivery</h3>
                                         <span class="icon-tick">
@@ -368,13 +490,13 @@ const Positions = () =>{
                                 </ul>
                         </div>
 
-                        <div className="sele2 select2 selInp m-md-0 mt-sm-2 w-auto   mr-2 px-0">
+                        <div onClick={ (e)=>clickInpCleseUL(e)} className="sele2 select2 selInp m-md-0 mt-sm-2 w-auto   mr-2 px-0">
                                 <span className="arow Amaro"></span>
                                           <span onClick={ (e) => cliekclearBtn(e)} className="select2-selection__clear selection__clear" title="Remove all items" data-select-id="2">×</span>
 
                                             <input placeholder="Choose Work Type" onClick={()=> hindlerArowInp(".select2")} type="text"   name="" id="working" className="working pl-3" />
 
-                                            <ul className="sele2 noShow">
+                                            <ul onMouseLeave={(e)=>closeUl(e)} className="sele2 noShow">
 
 
                                                 <li onClick={ (e) => valueSelect(e)}  value="1">
@@ -393,13 +515,13 @@ const Positions = () =>{
                             
                         </div>
 
-                        <div className="sele3 select3 selInp m-md-0 mt-sm-2    mr-2 pr-0 pl-md-2 pl-sm-0">
+                        <div onClick={ (e)=>clickInpCleseUL(e)} className="sele3 select3 selInp m-md-0 mt-sm-2    mr-2 pr-0 pl-md-2 pl-sm-0">
                         <span className="arow Amaro"></span>
 
                                 <span onClick={ (e) => cliekclearBtn(e)} className="select3-selection__clear selection__clear" title="Remove all items" data-select-id="3">×</span>
                                 <input placeholder="Choose Location" onClick={()=> hindlerArowInp(".select3")}  type="text"  name="" id="location" className="location pl-3" />
 
-                                <ul className="sele3 noShow" style={{zIndex:9}}>
+                                <ul onMouseLeave={(e)=>closeUl(e)} className="sele3 noShow" style={{zIndex:9}}>
 
                             
                                     <li onClick={ (e) => valueSelect(e)}   value="1">
