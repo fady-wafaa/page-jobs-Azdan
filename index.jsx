@@ -199,8 +199,8 @@ const Positions = () =>{
 
     // ! Arow input <====
     const hindlerArowInp =(clas)=>{
-        // let chekUl =  [...document.querySelectorAll(".selInp ul")].filter( e => e != document.querySelector(`${clas} ul`) ) 
-        // chekUl.map(e => e.classList.add("noShow"))
+        let chekUl =  [...document.querySelectorAll(".selInp ul")].filter( e => e != document.querySelector(`${clas} ul`) ) 
+        chekUl.map(e => e.classList.add("noShow"))
         // let chekUl2 =  [...document.querySelectorAll(".selInp ul")].filter( e => e == document.querySelector(`${clas} ul`) ) 
         // chekUl2.map(e => e.classList.remove("noShow"))
         
