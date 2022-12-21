@@ -785,4 +785,234 @@ a{
             }
         }
     }
+    .dis_moible{
+        display: flex;
+        flex-wrap: wrap;
+ 
+        &  .AllSelect{
+        //  flex-direction: column !important;
+        //  flex-wrap: nowrap !important;
+        //  height: auto !important;
+         & .selInp {
+            //  width: 90.5% !important;
+            //  height: 6.5vh !important;
+            //  margin: 5px 0;
+             position: relative;
+             top: 0;
+             left: 0;
+ 
+             & #department ,& #working ,& #location{
+                 font-size: 1.7vw !important;
+             }
+         }
+        }
+        & .toggle-and-clear {
+         width: 50%;
+         height: 5vh;
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         margin-left: 0.2rem !important;
+         & span{
+             margin-top: 0.5vw;
+             font-size: 1.8vw !important;
+             letter-spacing: 0.3px;
+         }
+       &  .remote-toggle {
+ 
+          & .toggle-switch {
+ 
+             & label {
+                 width: 32px;
+                 height: 18px;
+               }
+          }
+          
+       }
+         }
+     }
+    .ul {
+        & li{
+
+            & .job-list {
+                & .show{
+                    & .info {
+                        flex-direction: column !important;
+        
+                        & .jobInfo {
+                            margin: 5px 0;
+                            width: 100% !important;
+                            max-width:100% !important ;
+                             & .job_title{
+                                font-size: 3vw !important;
+                             } 
+                             & .job_desc{
+                                font-size: 2.3vw !important;
+                                font-weight: 400 !important;
+                             }
+                        }
+                        & .job-location {
+                            max-width: 100% !important;
+                            width: 100% !important;
+                            text-align: start !important;
+                            justify-content: flex-start;
+                            border-top: 1px solid #dadee4;
+                            padding-block: 15px !important;
+                            & .location-info{
+                                font-size: 3vw;
+                                margin-right: 10%;
+                                font-weight: 600;
+                                letter-spacing: 0;
+                            }
+                            & .location-icon{
+                                & i{
+                                    font-size: 3vw !important;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .title {
+        height: 55px;
+       & img {
+            width: 7vw;
+            height: 2.5vh !important;
+        }
+        & span {
+            & h4{
+                font-size: 2.2vw;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 425px){
+    .title_job {
+
+       & h3 {
+        font-size: 3vw !important;
+        }
+    }
+    .dis_moible{
+       display: flex;
+       flex-wrap: wrap;
+
+       &  .AllSelect{
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        height: auto !important;
+        & .selInp {
+            width: 90.5% !important;
+            height: 6.5vh !important;
+            margin: 5px 0;
+            position: relative;
+            top: 0;
+            left: 0;
+
+            & #department ,& #working ,& #location{
+                font-size: 1.7vw !important;
+            }
+        }
+       }
+       & .toggle-and-clear {
+        width: 35%;
+        height: 5vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 0.2rem !important;
+        & span{
+            margin-top: 0.5vw;
+            font-size: 1.8vw !important;
+            letter-spacing: 0.3px;
+        }
+      &  .remote-toggle {
+
+         & .toggle-switch {
+
+            & label {
+                width: 32px;
+                height: 18px;
+              }
+         }
+         
+      }
+        }
+    }
+    .input-field{
+        & input{
+            height: 30px !important;
+            font-size: 1.7vw !important;
+        }
+        & .icon-search{
+            font-size: 2.5vw !important;
+        }
+    }
+    .role-title{
+        
+        & h5{
+            font-size: 3vw !important;
+        }
+        & .role-count{
+             font-size: 2vw !important;
+        }
+    }
+    .ul {
+        & li{
+
+            & .job-list {
+                & .show{
+                    & .info {
+                        flex-direction: column !important;
+        
+                        & .jobInfo {
+                            margin: 5px 0;
+                            width: 100% !important;
+                            max-width:100% !important ;
+                             & .job_title{
+                                font-size: 3vw !important;
+                             } 
+                             & .job_desc{
+                                font-size: 2.3vw !important;
+                                font-weight: 400 !important;
+                             }
+                        }
+                        & .job-location {
+                            max-width: 100% !important;
+                            width: 100% !important;
+                            text-align: start !important;
+                            justify-content: flex-start;
+                            border-top: 1px solid #dadee4;
+                            padding-block: 15px !important;
+                            & .location-info{
+                                font-size: 3vw;
+                                margin-right: 10%;
+                                font-weight: 600;
+                                letter-spacing: 0;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .title {
+        height: 55px;
+       & img {
+            width: 7vw;
+            height: 2.5vh !important;
+        }
+        & span {
+            & h4{
+                font-size: 2.2vw;
+            }
+        }
+    }
+    // .role-title {
+
+    // }
 }

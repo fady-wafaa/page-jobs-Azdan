@@ -442,7 +442,7 @@ const Positions = () =>{
                     <h3 >Open Positions</h3>
                 </div>
 
-                <div className="container col-12 d-flex justify-content-start align-content-center p-0 mt-4 mb-3 flex-row flex-lg-row flex-md-column  flex-sm-column">
+                <div className="dis_moible container col-12 d-flex justify-content-start align-content-center p-0 mt-4 mb-3 flex-row flex-lg-row flex-md-column  flex-sm-column">
 
                     <div className="AllSelect  col-md-12  col-lg-9 pl-0 flex-md-row flex-sm-nowrap  flex-lg-nowrap">
 
