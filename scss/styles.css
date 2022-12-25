@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap");
 body {
   height: auto;
+  font-family: Source Sans Pro, sans-serif, "Helvetica Neue", Helvetica, Arial;
+  overflow-x: hidden;
 }
 
 a {
@@ -386,7 +388,11 @@ a {
   font-weight: 700;
   opacity: 0.9;
   cursor: pointer;
-  z-index: 99;
+  z-index: 999;
+  width: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5019607843);
+  height: 24px;
 }
 
 .toggle-and-clear {
@@ -837,5 +843,243 @@ a {
   }
   .title span h4 {
     font-size: 2.2vw;
+  }
+}
+.pageJob {
+  height: auto;
+  width: 100vw;
+}
+.pageJob .colorBac {
+  background-color: #6A5376;
+}
+.pageJob .colorBac .NavpageJob .infoTitle .link-back {
+  color: white !important;
+}
+.pageJob .colorBac .NavpageJob .infoTitle .link-back .fas {
+  font-size: 1.1vw;
+  margin-right: 5px;
+}
+.pageJob .colorBac .NavpageJob .btnFrom {
+  color: white;
+}
+.pageJob .colorBac .NavpageJob .btnFrom .brand-color {
+  margin-top: 0;
+  font-size: 1.8vw;
+  margin-bottom: 5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.pageJob .colorBac .NavpageJob .btnFrom .stick-hide-in-mobile {
+  font-family: Source Sans Pro, sans-serif, "Helvetica Neue", Helvetica, Arial;
+  font-size: 0.8vw;
+}
+.pageJob .colorBac .NavpageJob .btnFrom .btn-custom {
+  color: #fff !important;
+  background-color: #1ebea5;
+  border-color: #1ebea5;
+  border: 0;
+  font-size: 1.1vw;
+  padding: 8px 29px;
+}
+.pageJob .colorBac .NavpageJob .btnFrom .btn-custom:hover {
+  background-color: #57e4cf;
+}
+.pageJob .summary h6 {
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-size: 0.8vw;
+  font-family: "Roboto";
+  font-weight: 600;
+}
+.pageJob .summary p {
+  font-size: 0.75vw;
+  letter-spacing: 0.3px;
+  font-family: "Roboto";
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  width: 95%;
+}
+.pageJob .Responsibilities h6 {
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-size: 0.8vw;
+  font-family: "Roboto";
+  font-weight: 600;
+}
+.pageJob .Responsibilities ul li {
+  margin-block: 4px;
+  font-size: 0.75vw;
+  font-weight: 400;
+  font-family: "Roboto";
+  letter-spacing: 0.5px;
+  margin-left: 2.5vw;
+}
+.pageJob .application-form {
+  display: none;
+}
+.pageJob .application-form h4 {
+  color: #7b40a0;
+  font-weight: 400;
+  font-size: 1.3vw;
+  letter-spacing: 0.8px;
+}
+.pageJob .application-form .application-btn {
+  margin: 30px 0;
+}
+.pageJob .application-form .application-btn .resume-upload {
+  display: inline-block;
+  position: relative;
+}
+.pageJob .application-form .application-btn .resume-upload input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.pageJob .application-form .application-btn .resume-upload input:hover {
+  color: white !important;
+  background: #1ebea5 !important;
+}
+.pageJob .application-form .application-btn .resume-upload .btn-primary {
+  color: #1ebea5 !important;
+  border-color: #1ebea5 !important;
+  font-size: 16px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  padding: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+.pageJob .application-form .application-btn .resume-upload .btn-primary:hover {
+  z-index: 0;
+  color: white !important;
+  background-color: #1ebea5 !important;
+}
+.pageJob .application-form .application-btn .resume-upload .btn-primary span {
+  color: red;
+  margin-left: 3px;
+}
+.pageJob .application-form .application-btn .resume-upload .upload-file {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 0;
+}
+.pageJob .application-form .application-btn .resume-upload .upload-file:focus {
+  z-index: 1 !important;
+  color: white !important;
+  background: #1ebea5 !important;
+}
+.pageJob .application-form .application-btn .infoFrom {
+  height: auto;
+}
+.pageJob .application-form .application-btn .infoFrom .form-group {
+  margin-bottom: 15px;
+  position: relative;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+.pageJob .application-form .application-btn .infoFrom .form-group label {
+  background-color: #fff;
+  font-weight: normal;
+  margin-bottom: 0;
+  line-height: 1em;
+  padding: 3px 5px;
+  margin-left: 8px;
+  position: relative;
+  font-size: 0.7vw;
+  z-index: 10;
+}
+.pageJob .application-form .application-btn .infoFrom .form-group label span {
+  color: red;
+}
+.pageJob .application-form .application-btn .infoFrom .form-group .form-control {
+  color: #333;
+  background: #fff;
+  border: 1px solid #c5c5c5;
+}
+.pageJob .application-form .application-btn .infoFrom .form-group .form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  background-image: none;
+  border-radius: 4px;
+  margin-top: -3px;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.pageJob .application-form .application-btn .infoFrom .form-group .form-control:focus {
+  outline: none !important;
+  box-shadow: none;
+  border: 1px solid #9040A0;
+}
+.pageJob .application-form .application-btn .infoFrom .section-group .link-label {
+  font-size: 0.75vw;
+  padding: 0;
+  margin: 0 0 20px;
+}
+.pageJob .application-form .application-btn .infoFrom .section-group .link-label .link-label-title {
+  font-size: 16px;
+  padding: 0;
+  margin: 25px 0 5px;
+  font-weight: 600;
+}
+.pageJob .application-form .application-btn .infoFrom .section-group .link-group .form-group .form-control {
+  padding: 8px;
+  color: #333;
+  background: #fff;
+  border: 1px solid #c5c5c5;
+  height: 100%;
+}
+.pageJob .application-form .application-btn .infoFrom .section-group .link-group .form-group .form-control:focus {
+  outline: none !important;
+  box-shadow: none;
+  border: 1px solid #9040A0;
+}
+.pageJob .application-form .application-btn .infoFrom .section-group .link-group .form-group .btn-add {
+  padding: 3px !important;
+  height: 100%;
+  color: #333;
+  background: #fff;
+  border: 1px solid #c5c5c5;
+}
+.pageJob .application-form .application-btn .infoFrom .section-group .link-group .form-group .btn-add:focus {
+  box-shadow: none;
+  border: 1px solid #0a0a0a;
+}
+.pageJob .application-form .application-btn .btnSubm .btn-primary {
+  margin-top: 25px;
+  padding: 10px 5px;
+  font-size: 1vw !important;
+  color: #fff;
+  background-color: #1ebea5;
+  border-color: #1ebea5;
+}
+.pageJob .application-form .application-btn .btnSubm .btn-primary:hover {
+  background-color: #5ae4cf;
+  border-color: #5ee6d1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .application-btn .resume-upload .btn-primary {
+    font-size: 1.1vw !important;
+  }
+  .application-btn .infoFrom .form-group label {
+    font-size: 1vw !important;
+  }
+  .application-btn .btnSubm .btn-primary {
+    font-size: 1.5vw !important;
+    padding: 10px 5px !important;
   }
 }/*# sourceMappingURL=styles.css.map */
