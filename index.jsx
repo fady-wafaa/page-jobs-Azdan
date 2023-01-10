@@ -656,7 +656,7 @@ const Positions = ({ ArrDepar, work, location, data }) => {
     }
   };
 
-  // ! Arow input <====handlerArowInp
+  // ! Arow input <====handler ArowInp
   const handlerArowInp = (clas) => {
     let chekUl = [...document.querySelectorAll(".selInp ul")].filter(
       (e) => e != document.querySelector(`${clas} ul`)
@@ -775,8 +775,9 @@ const Positions = ({ ArrDepar, work, location, data }) => {
 
   
   /**
-   * falter input
-   * @param {*} e 
+   * function get input value then search in data
+   * filter input
+   * @param {*}  
    */
   const valueSelect = (e) => {
     if (
@@ -813,7 +814,7 @@ const Positions = ({ ArrDepar, work, location, data }) => {
 
     let clieckNowInp = e.nativeEvent.path[2].classList[0];
 
-    //  ! === > chcek on cleck now <==
+    //  ! === > check on cleck now <==
 
     if (clieckNowInp == "sele1") {
  
