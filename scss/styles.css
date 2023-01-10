@@ -68,7 +68,7 @@ a {
 .AllSelect .select1 {
   width: 16.5vw;
   height: 40px;
-  z-index: 20 !important;
+  z-index: 18 !important;
 }
 .AllSelect .select1 .Amaro {
   position: relative !important;
@@ -130,13 +130,16 @@ a {
   border: none;
   outline: none;
 }
+.AllSelect .select1 .selection__clear {
+  font-size: 1.2vw !important;
+}
 .AllSelect .select1 ul {
   border: 1px solid #e6e6e6;
   box-shadow: 0 2px 10px rgba(24, 50, 71, 0.2);
   border-radius: 0 0 8px 8px;
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: white !important;
 }
 .AllSelect .select1 ul li {
   cursor: pointer;
@@ -170,7 +173,6 @@ a {
 .AllSelect .select2 {
   width: 16.5vw;
   height: 40px;
-  z-index: 20 !important;
 }
 .AllSelect .select2 .Amaro {
   position: relative !important;
@@ -232,6 +234,9 @@ a {
   border: none;
   outline: none;
 }
+.AllSelect .select2 .selection__clear {
+  font-size: 1.2vw !important;
+}
 .AllSelect .select2 ul {
   border: 1px solid #e6e6e6;
   box-shadow: 0 2px 10px rgba(24, 50, 71, 0.2);
@@ -272,7 +277,7 @@ a {
 .AllSelect .select3 {
   width: 16.5vw;
   height: 40px;
-  z-index: 20 !important;
+  z-index: 15 !important;
 }
 .AllSelect .select3 .Amaro {
   position: relative !important;
@@ -333,6 +338,9 @@ a {
 .AllSelect .select3 #location:focus {
   border: 0.1px solid rgba(73, 73, 73, 0.29) !important;
   outline: none;
+}
+.AllSelect .select3 .selection__clear {
+  font-size: 1.2vw !important;
 }
 .AllSelect .select3 ul {
   border: 1px solid #e6e6e6;
@@ -540,31 +548,31 @@ a {
   margin: 0;
   padding: 0;
 }
-.ul li {
-  padding: 15px 0;
-  list-style: none;
-  border-top: 1px solid #e6e6e6 !important;
-  cursor: pointer;
-}
-.ul li .role-title {
+.ul .role-title {
   margin: -20px 0 0;
   padding: 20px 0 0;
   transition: all 0.1s ease-in-out;
 }
-.ul li .role-title h5 {
+.ul .role-title h5 {
   display: inline-block;
   margin-bottom: 20px;
   margin-top: 0;
   font-size: 22px;
   color: #7B40A0;
 }
-.ul li .role-title .role-count {
+.ul .role-title .role-count {
   background-color: #e6e6e6;
   float: right;
   font-size: 13px;
   padding: 3px 15px;
   border-radius: 25px;
   margin-right: 30px;
+}
+.ul li {
+  padding: 15px 0;
+  list-style: none;
+  border-top: 1px solid #e6e6e6 !important;
+  cursor: pointer;
 }
 .ul li .job-list {
   list-style: none;
@@ -632,7 +640,6 @@ a {
 }
 
 .no-jobs-found {
-  display: none;
   text-align: center;
   margin-top: 36px;
 }
@@ -666,6 +673,9 @@ a {
   .clear-text button {
     font-size: 0.75vw !important;
   }
+  .select2 {
+    z-index: 18;
+  }
 }
 @media only screen and (max-width: 1440px) {
   .toggle-and-clear .remote-toggle span {
@@ -679,6 +689,9 @@ a {
   .toggle-and-clear .remote-toggle span {
     font-size: 1.2vw !important;
   }
+  .select2 {
+    z-index: 17;
+  }
   .dis_moible {
     display: flex;
     flex-wrap: wrap;
@@ -689,7 +702,18 @@ a {
     left: 0;
   }
   .dis_moible .AllSelect .selInp #department, .dis_moible .AllSelect .selInp #working, .dis_moible .AllSelect .selInp #location {
-    font-size: 1.7vw !important;
+    font-size: 1.3vw !important;
+  }
+  .dis_moible .AllSelect .selInp ul {
+    position: relative;
+    z-index: 20 !important;
+    background-color: rgb(255, 255, 255);
+  }
+  .dis_moible .AllSelect .selInp ul li h3 {
+    font-size: 1.5vw !important;
+  }
+  .dis_moible .AllSelect .selInp .selection__clear {
+    font-size: 2.2vw !important;
   }
   .dis_moible .toggle-and-clear {
     width: 50%;
@@ -751,6 +775,126 @@ a {
     font-size: 2.2vw;
   }
 }
+@media only screen and (max-width: 570px) {
+  .title_job h3 {
+    font-size: 3vw !important;
+  }
+  .dis_moible {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .dis_moible .AllSelect {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    height: auto !important;
+  }
+  .dis_moible .AllSelect .selInp {
+    width: 90.5% !important;
+    height: 6.5vh !important;
+    margin: 5px 0;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .dis_moible .AllSelect .selInp #department, .dis_moible .AllSelect .selInp #working, .dis_moible .AllSelect .selInp #location {
+    font-size: 2vw !important;
+  }
+  .dis_moible .AllSelect .selInp ul {
+    position: relative;
+    z-index: 20 !important;
+    background-color: rgb(255, 255, 255);
+  }
+  .dis_moible .AllSelect .selInp ul li h3 {
+    font-size: 2vw !important;
+  }
+  .dis_moible .AllSelect .selInp .selection__clear {
+    font-size: 4vw !important;
+  }
+  .dis_moible .toggle-and-clear {
+    width: 45%;
+    height: 5vh;
+    margin-top: 4%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0.2rem !important;
+  }
+  .dis_moible .toggle-and-clear span {
+    margin-top: 0.5vw;
+    font-size: 2vw !important;
+    letter-spacing: 0.3px;
+  }
+  .dis_moible .toggle-and-clear .remote-toggle .toggle-switch {
+    width: 32%;
+  }
+  .dis_moible .toggle-and-clear .remote-toggle .toggle-switch label {
+    width: 32px;
+    height: 18px;
+  }
+  .dis_moible .toggle-and-clear .clear-text {
+    width: 30%;
+  }
+  .dis_moible .toggle-and-clear .clear-text button {
+    font-size: 1.9vw !important;
+  }
+  .input-field input {
+    height: 30px !important;
+    font-size: 1.7vw !important;
+  }
+  .input-field .icon-search {
+    font-size: 2.5vw !important;
+  }
+  .role-title h5 {
+    font-size: 3vw !important;
+  }
+  .role-title .role-count {
+    font-size: 2vw !important;
+  }
+  .ul {
+    position: relative;
+    z-index: 20 !important;
+    background-color: white;
+  }
+  .ul li .job-list .show .info {
+    flex-direction: column !important;
+  }
+  .ul li .job-list .show .info .jobInfo {
+    margin: 5px 0;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .ul li .job-list .show .info .jobInfo .job_title {
+    font-size: 3vw !important;
+  }
+  .ul li .job-list .show .info .jobInfo .job_desc {
+    font-size: 2.3vw !important;
+    font-weight: 400 !important;
+  }
+  .ul li .job-list .show .info .job-location {
+    max-width: 100% !important;
+    width: 100% !important;
+    text-align: start !important;
+    justify-content: flex-start;
+    border-top: 1px solid #dadee4;
+    padding-block: 15px !important;
+  }
+  .ul li .job-list .show .info .job-location .location-info {
+    font-size: 3vw;
+    margin-right: 10%;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .title {
+    height: 55px;
+  }
+  .title img {
+    width: 7vw;
+    height: 2.5vh !important;
+  }
+  .title span h4 {
+    font-size: 2.2vw;
+  }
+}
 @media only screen and (max-width: 425px) {
   .title_job h3 {
     font-size: 3vw !important;
@@ -773,11 +917,23 @@ a {
     left: 0;
   }
   .dis_moible .AllSelect .selInp #department, .dis_moible .AllSelect .selInp #working, .dis_moible .AllSelect .selInp #location {
-    font-size: 1.7vw !important;
+    font-size: 2vw !important;
+  }
+  .dis_moible .AllSelect .selInp ul {
+    position: relative;
+    z-index: 20 !important;
+    background-color: rgb(255, 255, 255);
+  }
+  .dis_moible .AllSelect .selInp ul li h3 {
+    font-size: 2vw !important;
+  }
+  .dis_moible .AllSelect .selInp .selection__clear {
+    font-size: 4vw !important;
   }
   .dis_moible .toggle-and-clear {
-    width: 35%;
+    width: 45%;
     height: 5vh;
+    margin-top: 4%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -785,12 +941,21 @@ a {
   }
   .dis_moible .toggle-and-clear span {
     margin-top: 0.5vw;
-    font-size: 1.8vw !important;
+    font-size: 2vw !important;
     letter-spacing: 0.3px;
+  }
+  .dis_moible .toggle-and-clear .remote-toggle .toggle-switch {
+    width: 32%;
   }
   .dis_moible .toggle-and-clear .remote-toggle .toggle-switch label {
     width: 32px;
     height: 18px;
+  }
+  .dis_moible .toggle-and-clear .clear-text {
+    width: 30%;
+  }
+  .dis_moible .toggle-and-clear .clear-text button {
+    font-size: 1.9vw !important;
   }
   .input-field input {
     height: 30px !important;
@@ -804,6 +969,11 @@ a {
   }
   .role-title .role-count {
     font-size: 2vw !important;
+  }
+  .ul {
+    position: relative;
+    z-index: 20 !important;
+    background-color: white;
   }
   .ul li .job-list .show .info {
     flex-direction: column !important;
@@ -1072,6 +1242,15 @@ a {
 }
 
 @media only screen and (max-width: 1024px) {
+  .AllSelect .select3 #department, .AllSelect .select3 #working, .AllSelect .select3 #location, .AllSelect .select2 #department, .AllSelect .select2 #working, .AllSelect .select2 #location, .AllSelect .select1 #department, .AllSelect .select1 #working, .AllSelect .select1 #location {
+    font-size: 1.1vw !important;
+  }
+  .AllSelect .select3 ul li h3, .AllSelect .select2 ul li h3, .AllSelect .select1 ul li h3 {
+    font-size: 1vw !important;
+  }
+  .AllSelect .select3 .selection__clear, .AllSelect .select2 .selection__clear, .AllSelect .select1 .selection__clear {
+    font-size: 1.5vw !important;
+  }
   .application-btn .resume-upload .btn-primary {
     font-size: 1.1vw !important;
   }
@@ -1081,5 +1260,95 @@ a {
   .application-btn .btnSubm .btn-primary {
     font-size: 1.5vw !important;
     padding: 10px 5px !important;
+  }
+}
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 3px solid #222222;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #57E4CF;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #57E4CF;
+  box-shadow: 0 0 20px #6A5376;
+}
+
+.ring:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid #57E4CF;
+  border-right: 3px solid #57E4CF;
+  border-radius: 50%;
+  -webkit-animation: animateC 2s linear infinite;
+          animation: animateC 2s linear infinite;
+}
+.ring:before .Loading {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+}
+.ring:before .Loading .Loading:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff000;
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px #fff000;
+}
+@-webkit-keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
   }
 }/*# sourceMappingURL=styles.css.map */
