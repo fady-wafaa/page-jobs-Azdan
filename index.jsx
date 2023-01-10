@@ -1,4 +1,4 @@
-// console.log(ReactRouterDOM)
+
 const Link = ReactRouterDOM.Link;
 const NavLink = ReactRouterDOM.NavLink;
 const Route = ReactRouterDOM.Route;
@@ -123,6 +123,12 @@ var GetData = [
   },
 ];
 
+
+/**
+ *Component Page New Job
+ * @param {*} param0 
+ * @returns 
+ */
 const PageJob = ({ match }) => {
   let [Applly, setApply] = useState(1);
   let [load, setLoad] = useState(false);
@@ -443,6 +449,11 @@ const PageJob = ({ match }) => {
   );
 };
 
+/**
+ *Component Link Open New Job
+ * @param {*} param0 
+ * @returns 
+ */
 const LinkOpenJob = ({ data }) => {
   // console.log(data)
   return (
@@ -480,7 +491,11 @@ const LinkOpenJob = ({ data }) => {
   );
 };
 
-
+/**
+ * Component detail One Job 
+ * @param {*} param0 
+ * @returns 
+ */
 const OneJob = ({ data }) => {
   // console.log(data)
   return (
@@ -579,7 +594,12 @@ const ContainerUl = ({ ArrDepar, data, arrDepar }) => {
   );
 };
 
-// //! =================>> Positions <==================
+
+/**
+ * Component Positions all Select 
+ * @param {*} param0 
+ * @returns 
+ */
 const Positions = ({ ArrDepar, work, location, data }) => {
   let [checkTgg, setCheckTgg] = useState(true);
   const [newdata, setNewData] = useState(data);
@@ -656,8 +676,13 @@ const Positions = ({ ArrDepar, work, location, data }) => {
     }
   };
 
-  // ! Arow input <====handler ArowInp
-  const handlerArowInp = (clas) => {
+
+  /**
+   * Arrow input
+   * funtion handler Arrow Inp
+   * @param {*}  
+   */
+  const handlerArrowInp = (clas) => {
     let chekUl = [...document.querySelectorAll(".selInp ul")].filter(
       (e) => e != document.querySelector(`${clas} ul`)
     );
@@ -676,7 +701,12 @@ const Positions = ({ ArrDepar, work, location, data }) => {
     }
   };
 
-  // ! ****************===> function toggle BTN <===*****************
+  
+  /**
+   * function toggle BTN
+   * @param {*} e 
+   * @returns 
+   */
   const buttonRomtle = (e) => {
     if (checkTgg) {
       document.querySelector(".select3").style.display = "none";
@@ -722,7 +752,11 @@ const Positions = ({ ArrDepar, work, location, data }) => {
     return setCheckTgg(!checkTgg);
   };
 
-  // ! ****************===> function Clean Button <===*****************
+
+  /**
+   * function Clean Button
+   * @returns 
+   */
   const CleanButton = () => {
     document.querySelector(".AllSelect").classList.remove("pl-0");
     document.querySelector(".AllSelect").classList.add("pl-1");
@@ -754,7 +788,11 @@ const Positions = ({ ArrDepar, work, location, data }) => {
     return setCheckTgg(!checkTgg);
   };
 
-  // ! *************** ===>>  function close  ul out mos <<==== ************
+ 
+    /**
+   * function close  ul out mos
+   * @param {*}  
+   */
   const closeUl = (e) => {
     e.currentTarget.classList.add("noShow");
   };
@@ -1173,7 +1211,7 @@ const Positions = ({ ArrDepar, work, location, data }) => {
               </span>
               <input
                 placeholder="Choose Department"
-                onClick={(e) => handlerArowInp(".select1")}
+                onClick={(e) => handlerArrowInp(".select1")}
                 type="text"
                 name=""
                 id="department"
@@ -1264,7 +1302,7 @@ const Positions = ({ ArrDepar, work, location, data }) => {
 
               <input
                 placeholder="Choose Work Type"
-                onClick={() => handlerArowInp(".select2")}
+                onClick={() => handlerArrowInp(".select2")}
                 type="text"
                 name=""
                 id="working"
@@ -1314,7 +1352,7 @@ const Positions = ({ ArrDepar, work, location, data }) => {
               </span>
               <input
                 placeholder="Choose Location"
-                onClick={() => handlerArowInp(".select3")}
+                onClick={() => handlerArrowInp(".select3")}
                 type="text"
                 name=""
                 id="location"
@@ -1402,7 +1440,11 @@ const Positions = ({ ArrDepar, work, location, data }) => {
   );
 };
 
-//! =================>> Header <==================
+
+/**
+ * Component Header
+ * @returns 
+ */
 const Header = () => {
   return (
     <div className="container-fluid p-0">
@@ -1428,6 +1470,10 @@ const Header = () => {
   );
 };
 
+/**
+ * Component Home
+ * @returns 
+ */
 const Home = () => {
   const [data, setData] = useState([]);
   const [ArrDepar, setArrDepar] = useState([]);
