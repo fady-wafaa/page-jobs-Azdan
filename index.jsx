@@ -13,7 +13,7 @@ var GetData = [
     id: "1",
     remote: true,
     worktypeV: "1",
-    locationText: "",
+    locationText: "remote",
     reults: {
       id: "1",
       title: "ERP Project Manager",
@@ -36,7 +36,7 @@ var GetData = [
     id: "2",
     remote: true,
     worktypeV: "1",
-    locationText: "",
+    locationText: "remote",
     reults: {
       id: "2",
       title: "NetSuite Principle Consultant (Remote)",
@@ -59,7 +59,7 @@ var GetData = [
     id: "3",
     remote: true,
     worktypeV: "1",
-    locationText: "",
+    locationText: "remote",
     reults: {
       id: "3",
       title: "Frontend Engineer",
@@ -483,8 +483,8 @@ const ContainerUl = ({ ArrDepar, data, arrDepar }) => {
   let [loadNew, setLoadNew] = useState(false);
 
   // console.log("ArrDepar",ArrDepar)
-  console.log("data",data)
-  console.log("arrDepar",arrDepar)
+  // console.log("data",data)
+  // console.log("arrDepar",arrDepar)
   useEffect(() => {
     const timer = setTimeout(() => {
       let Res = GetData;
@@ -738,6 +738,8 @@ const Positions = ({ ArrDepar, work, location, data }) => {
             (el.style.fontSize = "0.78vw"),
             (el.style.color = "rgba(0, 0, 0, 0.602)"),
           ]);
+          setNewData(data);
+          setArrDepar(ArrDepar);
         }
       };
 
@@ -941,19 +943,53 @@ const Positions = ({ ArrDepar, work, location, data }) => {
         }
         if (clieckNowInp == "sele2") {
           // console.log(e.nativeEvent.composedPath())
+          let checkMark = [...document.querySelectorAll(".sele2 .sele2 li .icon-tick")].filter((el) => el.classList.contains("show"));
+          if(checkMark.length > 0){
+              console.log("checkMark",checkMark);
+              [ ...document.querySelectorAll(".sele2 .sele2 li .icon-tick")].filter((el) => el.classList.remove("show"));
+            [...document.querySelectorAll(".sele2 .sele2 li h3")].filter((el) => el.classList.remove("font-weight-bold"));
+            [...document.querySelectorAll(".sele2 .sele2 li h3")].filter((el) => el.style.fontSize = "0.78vw");
+            [...document.querySelectorAll(".sele2 .sele2 li h3")].filter((el) => el.style.color = "rgba(0, 0, 0, 0.602)");
+            }
+       
+            e.currentTarget.querySelector(".icon-tick").classList.add("show");
+            e.currentTarget.querySelector("h3").classList.add("font-weight-bold");
+            e.currentTarget.querySelector("h3").style.fontSize = "0.9vw";
+            e.currentTarget.querySelector("h3").style.color = "rgba(0, 0, 0)";
+            // if (! e.currentTarget.querySelector(`.${clieckNowInp} ul li h3`).classList.contains("font-weight-bold")) {
+            //   console.log("fady")
+            // } 
+       
+            
           
-          
-          
+            let inputTrget = document.querySelector(`.${clieckNowInp} input`);
           let check = [...document.querySelectorAll(`.${clieckNowInp} .icon-tick`),].filter((el) => el.classList.contains("show"));
           if(check.length > 0){
             let getValueInpDepat = e.currentTarget.querySelector("h3").innerHTML ;
             let filterDep = data.map((el) => el.reults.worktypeT == getValueInpDepat ? el : null).filter((e) => e !== null)
-            // let ArrDep = [...new Set(filterDep.map((e) => e.departmentT))];
-            // setArrDepar(filterDep);
+       
 
             setNewData(filterDep);         
 
           }
+          inputTrget.value = `Work Type  (${check.length})`;
+          document
+            .querySelector(`.${clieckNowInp} .selection__clear`)
+            .classList.add("show");
+
+            [...document.querySelectorAll(`.${clieckNowInp} ul li `)].map((e) => [
+              e.querySelector(".icon-tick").classList.remove("show"),
+              (inputTrget.value = ``),
+              e.querySelector("h3").classList.remove("font-weight-bold"),
+              (e.querySelector("h3").style.fontSize = "0.78vw"),
+              (e.querySelector("h3").style.color = "rgba(0, 0, 0, 0.602"),
+            ]);
+            e.currentTarget.querySelector(".icon-tick").classList.add("show");
+            e.currentTarget.querySelector("h3").classList.add("font-weight-bold");
+            e.currentTarget.querySelector("h3").style.fontSize = "0.9vw";
+            e.currentTarget.querySelector("h3").style.color = "rgba(0, 0, 0)";
+            inputTrget.value = `Work Type (${1})`;
+        
 
         }
 
@@ -973,7 +1009,7 @@ const Positions = ({ ArrDepar, work, location, data }) => {
 
             if (checkLI == 100) {
               if(!e.currentTarget.querySelector(".icon-tick").classList.contains("show")){
-                  console.log("nnn")
+               
                   setNewData(GetData)
                   setArrDepar(ArrDepar)
               }else{
@@ -1032,145 +1068,36 @@ const Positions = ({ ArrDepar, work, location, data }) => {
         
 
             // document.querySelector(`.${clieckNowInp} .selection__clear`).classList.add("show")
-          } else if (clieckNowInpclieckNowInp == "sele2") {
-            // console.log( document.querySelector("#department").value.length)
-            // console.log( e.currentTarget.querySelector("h3").innerHTML)
-            // console.log( e.currentTarget.value)
-
-                if(document.querySelector("#department").value.length != 0){
-                    let valueworktype =e.currentTarget.value + 1;
-                    let checkInWork = [...document.querySelectorAll(".sele2 li span")]
-                    .map(e => e.classList.contains("show"))
-                    let checkIneDep = [...document.querySelectorAll(".sele1 li span")]
-                    .map(e => e.classList.contains("show"))
-
-            //         console.log(checkIneDep[1])
-            //         if(checkInWork[1] == true){
-
-            //             let checkData =newdata.filter(e => e.reults.worktypeV == 1 )
-            //             console.log(checkData)
-            //             setNewData(checkData)
-            //             let ArrDep = [...new Set(checkData.map(e => e.departmentT ))];
-
-            //                 setArrDepar(ArrDep)
-            //         }else{
-            //             let checkData =newdata.filter(e => e)
-
-            //             setNewData(checkData)
-            //             let ArrDep = [...new Set(checkData.map(e => e.departmentT ))];
-
-            //                 setArrDepar(ArrDep)
-                    }
-
-            //         // if(valueworktype == 2){
-            //         //     let checkData =newdata.filter(e => e.reults.worktypeV == 2)
-            //         //     console.log("checkData",checkData.length)
-            //         //     // console.log("newdata",newdata)
-            //         //     if(checkData.length != 0){
-
-            //         //         setNewData(checkData)
-            //         //         let ArrDep = [...new Set(checkData.map(e => e.departmentT ))];
-
-            //         //             setArrDepar(ArrDep)
-            //         //     }else{
-            //         //         setNewData([])
-            //         //         setArrDepar(false)
-            //         //     }
-            //         //         // setNewData(data)
-            //         //         // setArrDepar(ArrDepar)
-            //         // }else{
-            //         //     let filterDep = data.map(el => el.departmentT  === e.currentTarget.querySelector("h3").innerHTML ? el : null).filter(e => e!== null)
-            //         //     setNewData(filterDep)
-            //         //     let ArrDep = [...new Set(filterDep.map(e => e.departmentT ))];
-
-            //         //         setArrDepar(ArrDep)
-
-            //         //     // setNewData(data)
-
-            //         // }
-
-            //     }else{
-            //         // let valueworktype =e.currentTarget.value + 1;
-
-            //         // .querySelector(".icon-tick").classList.contains("show")
-            //         let checkInWork = [...document.querySelectorAll(".sele2 li span")].map(e => e.classList.contains("show"))
-
-            //         if(checkInWork[0] == true){
-            //             let checkData =newdata.filter(e => e.reults.worktypeV == 1)
-            //             console.log(checkData)
-
-            //             setNewData(checkData)
-            //             let ArrDep = [...new Set(checkData.map(e => e.departmentT ))];
-
-            //                 setArrDepar(ArrDep)
-            //         }else{
-            //             if(checkInWork[1] == true){
-            //                 let checkData =newdata.filter(e => e.reults.worktypeV == 2)
-            //        setNewData(checkData)
-            //        let ArrDep = [...new Set(checkData.map(e => e.departmentT ))];
-
-            //        setArrDepar(ArrDep)
-
-            //    }else{
-
-            //        setNewData(data)
-            //         setArrDepar(ArrDepar)
-            //    }
-            //         }
-            //         if(checkInWork[1] == true){
-            //                      let checkData =newdata.filter(e => e.reults.worktypeV == 2)
-            //             setNewData(checkData)
-            //             let ArrDep = [...new Set(checkData.map(e => e.departmentT ))];
-
-            //             setArrDepar(ArrDep)
-
-            //         }else{
-            //             if(checkInWork[0] == true){
-            //                 let checkData =newdata.filter(e => e.reults.worktypeV == 1)
-            //                 console.log(checkData)
-
-            //                 setNewData(checkData)
-            //                 let ArrDep = [...new Set(checkData.map(e => e.departmentT ))];
-
-            //                     setArrDepar(ArrDep)
-            //             }else{
-
-            //                 setNewData(data)
-            //                 setArrDepar(ArrDepar)
-            //             }
-            //         }
-            //         if(checkInWork[0] == true && checkInWork[1] == true){
-            //             setNewData(data)
-            //             setArrDepar(ArrDepar)
-
-            //         }
-            //         // if(valueworktype == "Full-Time"){
-
-            //         // }
-            //         //  if(valueworktype == "Part-Time"){
-            //         //     let checkData =newdata.filter(e => e.reults.worktypeV == 2)
-            //         //     setNewData(checkData)
-            //         //     let ArrDep = [...new Set(checkData.map(e => e.departmentT ))];
-
-            //         //     setArrDepar(ArrDep)
-            //         // }else{
-
-            //         //     setNewData(data)
-
-            //         // }
-
-            //         // console.log(data.filter(e => e.reults.worktypeT == e.currentTarget.querySelector("h3").innerHTML))
-            //     }
-
-            inputTrget.value = `Work Type  (${check.length})`;
-            document
-              .querySelector(`.${clieckNowInp} .selection__clear`)
-              .classList.add("show");
-          } else if (clieckNowInp == "sele3") {
+          } 
+     
+          else if (clieckNowInp == "sele3") {
+            let check = [...document.querySelectorAll(`.${clieckNowInp} .icon-tick`),].filter((el) => el.classList.contains("show"));
+            if(check.length > 0){
+              let getValueInpDepat = e.currentTarget.querySelector("h3").innerHTML ;
+              let filterDep = data.map((el) => el.locationText == getValueInpDepat ? el : null).filter((e) => e !== null)
+              // let ArrDep = [...new Set(filterDep.map((e) => e.departmentT))];
+              // setArrDepar(filterDep);
+  
+              setNewData(filterDep);         
+  
+            }
             inputTrget.value = `Location (${check.length})`;
             document
               .querySelector(`.${clieckNowInp} .selection__clear`)
               .classList.add("show");
+
+              [...document.querySelectorAll(`.${clieckNowInp} ul li `)].map((e) => [
+                e.querySelector(".icon-tick").classList.remove("show"),
+                (inputTrget.value = ``),
+                e.querySelector("h3").classList.remove("font-weight-bold"),
+                (e.querySelector("h3").style.fontSize = "0.78vw"),
+                (e.querySelector("h3").style.color = "rgba(0, 0, 0, 0.602"),
+              ]);
+              e.currentTarget.querySelector(".icon-tick").classList.add("show");
+              e.currentTarget.querySelector("h3").classList.add("font-weight-bold");
+              e.currentTarget.querySelector("h3").style.fontSize = "0.9vw";
+              e.currentTarget.querySelector("h3").style.color = "rgba(0, 0, 0)";
+              inputTrget.value = `Location (${1})`;
           }
 
           inputTrget.style.color = "#000";
