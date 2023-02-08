@@ -256,51 +256,15 @@ const PageJob = ({ match }) => {
           <div className="container   py-5">
             <div className="summary py-3">
               <h6 className="text-center my-4">Job Summary</h6>
-              <p className="text-left">{data.reults.descriptionT}</p>
+              <span dangerouslySetInnerHTML={{__html: data.reults.descriptionT}} />
             </div>
 
             <div className="Responsibilities py-5">
               <h6 className="text-center my-4">Responsibilities</h6>
-              {data.reults.responsibilities}
-              {/* { requi(data)} */}
-
-              {/* <ul className="ml-auto ml-5">
-                                    <li >Understanding the project scope, schedule, and deliverables from the project manager</li>
-                                    <li >Working closely with Azdan consultants to recognize project needs and requirements.</li>
-                                <li >Gather Project Requirements through meetings with the client and the internal function team.</li>
-                                <li >Document all client meetings by the Minutes of the meeting document to be shared with the direct manager and the internal team.</li>
-                                <li >Driving periodic project reviews and mitigating risks with due diligence and a data-driven approach</li>
-                                <li >Contributing to the delivery of all aspects of the project and services: controlling and reporting on project activities and information security.</li>
-                                <li >End-to-end program management – project initiation, planning, execution, control, and closure.</li>
-                                <li >Applies a comprehensive understanding of NetSuite ERP foundational concepts and customer solutions</li>
-                                <li >Cultivate relationships with team members, customer stakeholders and 3rd parties</li>
-                                <li >Assign, disseminate, track, control and accept work to assigned parties within the Project scope.</li>
-                                <li >Handling conflicts and ensuring project safe integration and delivery among various parties and stakeholders.</li>
-                                <li >Conduct Project progress meetings, steering meetings and correspondences.</li>
-                                <li >Influence project changes and enforces project change management procedures.</li>
-                                <li >Maintain and professionally keep project documentation according to the Azdan PM policy and be prepared for projects audit.</li>
-                                <li >Prepare all project-related reports such as project status, variance report, resources utilization, risk reports.</li>
-                                <li >Reporting, analyzing, and resolving issues related to the implementation, stakeholders, and project operations that may impact service quality; ensuring that stakeholders’ questions and problems are resolved properly.</li>
-                                <li >Improving support experience for quality results by studying, evaluating, and redesigning processes, establishing and communicating service metrics, monitoring and analyzing results, and implementing changes</li>
-                                </ul> */}
+              <span dangerouslySetInnerHTML={{__html: data.reults.responsibilities}} />
 
               <h6 className="text-center my-4">Requirements </h6>
-
-              {data.reults.requirements}
-
-              {/* <ul className="ml-auto ml-5">
-                                    <li >Proven track record for planning, executing, controlling, and closing projects and the ability to manage NetSuite projects and their components simultaneously with minimal supervision.</li>
-                                    <li >Experience in project management using waterfall methodology for medium to large-sized projects.</li>
-                                    <li >Strong skills in creating and maintaining project and program plans, including risks, actions, and issues.</li>
-                                    <li >Highly efficient in resource planning and tasks assigned.</li>
-                                    <li >Knowledge of benefits and dependency mapping, risk management, and resource planning.</li>
-                                    <li >Highly proficient IT skills in Word, Excel, PowerPoint, and MS projects.</li>
-                                    <li >Line management or team leader experience.</li>
-                                    <li >Excellent written/oral communication skills for reports and presentations.</li>
-                                    <li >Diplomatic ability to influence others at all levels of the business.</li>
-                                    <li >Strong and demonstrated ability to build lasting relationships with key stakeholders.</li>
-                                    <li>Ability to competently mediate disagreements and negotiate agreeable resolutions</li>
-                                </ul> */}
+              <span dangerouslySetInnerHTML={{__html: data.reults.requirements}} />
             </div>
           </div>
 
