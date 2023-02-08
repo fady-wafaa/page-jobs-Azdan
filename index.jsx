@@ -188,7 +188,7 @@ const PageJob = ({ match }) => {
 
   const addHyperlink = (elem) => {
     if (
-      elem.nativeEvent.path[1].querySelector(".form-control").value.trim() ===
+      elem.nativeEvent.composedPath()[1].querySelector(".form-control").value.trim() ===
       ""
     ) {
       return false;
@@ -627,6 +627,7 @@ const ContainerUl = ({ ArrDepar, data, arrDepar }) => {
  * @returns 
  */
 const Positions = ({ ArrDepar, work, location, data }) => {
+
       let [checkTgg, setCheckTgg] = useState(true);
       const [newdata, setNewData] = useState(data);
       const [arrDepar, setArrDepar] = useState(ArrDepar);
@@ -933,14 +934,26 @@ const Positions = ({ ArrDepar, work, location, data }) => {
             // let ArrDep = [...new Set(filterDep.map((e) => e.departmentT))];
             // setArrDepar(filterDep);
 
-            setNewData(filterDep);
-          
+            setNewData(filterDep);         
 
           }
 
+        }
+        if (clieckNowInp == "sele2") {
+          // console.log(e.nativeEvent.composedPath())
+          
+          
+          
+          let check = [...document.querySelectorAll(`.${clieckNowInp} .icon-tick`),].filter((el) => el.classList.contains("show"));
+          if(check.length > 0){
+            let getValueInpDepat = e.currentTarget.querySelector("h3").innerHTML ;
+            let filterDep = data.map((el) => el.reults.worktypeT == getValueInpDepat ? el : null).filter((e) => e !== null)
+            // let ArrDep = [...new Set(filterDep.map((e) => e.departmentT))];
+            // setArrDepar(filterDep);
 
-      
+            setNewData(filterDep);         
 
+          }
 
         }
 
@@ -1024,12 +1037,12 @@ const Positions = ({ ArrDepar, work, location, data }) => {
             // console.log( e.currentTarget.querySelector("h3").innerHTML)
             // console.log( e.currentTarget.value)
 
-            //     if(document.querySelector("#department").value.length != 0){
-            //         let valueworktype =e.currentTarget.value + 1;
-            //         let checkInWork = [...document.querySelectorAll(".sele2 li span")]
-            //         .map(e => e.classList.contains("show"))
-            //         let checkIneDep = [...document.querySelectorAll(".sele1 li span")]
-            //         .map(e => e.classList.contains("show"))
+                if(document.querySelector("#department").value.length != 0){
+                    let valueworktype =e.currentTarget.value + 1;
+                    let checkInWork = [...document.querySelectorAll(".sele2 li span")]
+                    .map(e => e.classList.contains("show"))
+                    let checkIneDep = [...document.querySelectorAll(".sele1 li span")]
+                    .map(e => e.classList.contains("show"))
 
             //         console.log(checkIneDep[1])
             //         if(checkInWork[1] == true){
@@ -1047,7 +1060,7 @@ const Positions = ({ ArrDepar, work, location, data }) => {
             //             let ArrDep = [...new Set(checkData.map(e => e.departmentT ))];
 
             //                 setArrDepar(ArrDep)
-            //         }
+                    }
 
             //         // if(valueworktype == 2){
             //         //     let checkData =newdata.filter(e => e.reults.worktypeV == 2)
@@ -1383,7 +1396,7 @@ const Positions = ({ ArrDepar, work, location, data }) => {
             </div>
           </div>
 
-          <div className="container mb-3">
+          <div className="container mb-4">
             <div className="input-field">
               <input
                 className="search_input"

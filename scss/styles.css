@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap");
 body {
   height: auto;
-  font-family: Source Sans Pro, sans-serif, "Helvetica Neue", Helvetica, Arial;
+  font-family: Source Sans Pro,sans-serif,"Helvetica Neue",Helvetica,Arial;
   overflow-x: hidden;
 }
 
@@ -19,11 +19,19 @@ a {
   width: 100%;
   height: 70px;
   padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .title img {
   width: 7vw;
   height: 5vh;
@@ -33,15 +41,26 @@ a {
   text-align: center;
   font-size: 0.7vw;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 7px;
 }
+
 .title span h4 {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   font-size: 1vw;
   font-weight: 400;
@@ -54,22 +73,34 @@ a {
   font-size: 1.8vw !important;
   color: #7B40A0;
   letter-spacing: 0.5px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .AllSelect {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   height: 7vh;
 }
+
 .AllSelect .select1 {
   width: 16.5vw;
   height: 40px;
   z-index: 18 !important;
 }
+
 .AllSelect .select1 .Amaro {
   position: relative !important;
   top: 0;
@@ -77,6 +108,7 @@ a {
   height: 10px;
   width: 10px;
 }
+
 .AllSelect .select1 .Amaro::before {
   content: "";
   position: absolute;
@@ -87,8 +119,10 @@ a {
   margin-top: -2px;
   top: 70%;
   cursor: pointer;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
+
 .AllSelect .select1 .openInput {
   position: relative !important;
   top: 0;
@@ -96,6 +130,7 @@ a {
   height: 15px;
   width: 15px;
 }
+
 .AllSelect .select1 .openInput::before {
   content: "";
   position: absolute;
@@ -106,8 +141,10 @@ a {
   margin-top: -2px;
   top: 50%;
   cursor: pointer;
-  transform: rotate(180deg) !important;
+  -webkit-transform: rotate(180deg) !important;
+          transform: rotate(180deg) !important;
 }
+
 .AllSelect .select1 #department {
   width: 100%;
   padding: 5px;
@@ -126,54 +163,72 @@ a {
   background-color: transparent !important;
   -webkit-appearance: none !important;
 }
+
 .AllSelect .select1 #department:focus {
   border: none;
   outline: none;
 }
+
 .AllSelect .select1 .selection__clear {
   font-size: 1.2vw !important;
 }
+
 .AllSelect .select1 ul {
   border: 1px solid #e6e6e6;
-  box-shadow: 0 2px 10px rgba(24, 50, 71, 0.2);
+  -webkit-box-shadow: 0 2px 10px #152d3d2d;
+          box-shadow: 0 2px 10px #152d3d2d;
   border-radius: 0 0 8px 8px;
   margin: 0;
   padding: 0;
   background-color: white !important;
 }
+
 .AllSelect .select1 ul li {
   cursor: pointer;
   list-style: none;
   padding: 15px;
   color: rgba(0, 0, 0, 0.602);
   font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .AllSelect .select1 ul li h3 {
   font-size: 0.78vw;
   font-family: "Roboto";
 }
+
 .AllSelect .select1 ul li .icon-tick {
   font-size: 1vw;
   display: none;
 }
+
 .AllSelect .select1 ul li .icon-tick svg {
   width: 13px !important;
   height: 13px !important;
 }
+
 .AllSelect .select1 ul li:hover {
   color: rgba(0, 0, 0, 0.823);
   font-weight: 500;
 }
+
 .AllSelect .select1 .noShow {
   display: none;
 }
+
 .AllSelect .select2 {
   width: 16.5vw;
   height: 40px;
 }
+
 .AllSelect .select2 .Amaro {
   position: relative !important;
   top: 0;
@@ -181,6 +236,7 @@ a {
   height: 10px;
   width: 10px;
 }
+
 .AllSelect .select2 .Amaro::before {
   content: "";
   position: absolute;
@@ -191,8 +247,10 @@ a {
   margin-top: -2px;
   top: 70%;
   cursor: pointer;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
+
 .AllSelect .select2 .openInput {
   position: relative !important;
   top: 0;
@@ -200,6 +258,7 @@ a {
   height: 15px;
   width: 15px;
 }
+
 .AllSelect .select2 .openInput::before {
   content: "";
   position: absolute;
@@ -210,8 +269,10 @@ a {
   margin-top: -2px;
   top: 50%;
   cursor: pointer;
-  transform: rotate(180deg) !important;
+  -webkit-transform: rotate(180deg) !important;
+          transform: rotate(180deg) !important;
 }
+
 .AllSelect .select2 #working {
   width: 100%;
   padding: 5px;
@@ -230,55 +291,73 @@ a {
   background-color: transparent !important;
   -webkit-appearance: none !important;
 }
+
 .AllSelect .select2 #working:focus {
   border: none;
   outline: none;
 }
+
 .AllSelect .select2 .selection__clear {
   font-size: 1.2vw !important;
 }
+
 .AllSelect .select2 ul {
   border: 1px solid #e6e6e6;
-  box-shadow: 0 2px 10px rgba(24, 50, 71, 0.2);
+  -webkit-box-shadow: 0 2px 10px #152d3d2d;
+          box-shadow: 0 2px 10px #152d3d2d;
   border-radius: 0 0 8px 8px;
   margin: 0;
   padding: 0;
   background-color: white;
 }
+
 .AllSelect .select2 ul li {
   cursor: pointer;
   list-style: none;
   padding: 15px;
   color: rgba(0, 0, 0, 0.602);
   font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .AllSelect .select2 ul li h3 {
   font-size: 0.78vw;
   font-family: "Roboto";
 }
+
 .AllSelect .select2 ul li .icon-tick {
   font-size: 1vw;
   display: none;
 }
+
 .AllSelect .select2 ul li .icon-tick svg {
   width: 13px !important;
   height: 13px !important;
 }
+
 .AllSelect .select2 ul li:hover {
   color: rgba(0, 0, 0, 0.823);
   font-weight: 500;
 }
+
 .AllSelect .select2 .noShow {
   display: none;
 }
+
 .AllSelect .select3 {
   width: 16.5vw;
   height: 40px;
   z-index: 15 !important;
 }
+
 .AllSelect .select3 .Amaro {
   position: relative !important;
   top: 0;
@@ -286,6 +365,7 @@ a {
   height: 10px;
   width: 10px;
 }
+
 .AllSelect .select3 .Amaro::before {
   content: "";
   position: absolute;
@@ -296,8 +376,10 @@ a {
   margin-top: -2px;
   top: 70%;
   cursor: pointer;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
+
 .AllSelect .select3 .openInput {
   position: relative !important;
   top: 0;
@@ -305,6 +387,7 @@ a {
   height: 15px;
   width: 15px;
 }
+
 .AllSelect .select3 .openInput::before {
   content: "";
   position: absolute;
@@ -315,8 +398,10 @@ a {
   margin-top: -2px;
   top: 50%;
   cursor: pointer;
-  transform: rotate(180deg) !important;
+  -webkit-transform: rotate(180deg) !important;
+          transform: rotate(180deg) !important;
 }
+
 .AllSelect .select3 #location {
   width: 100%;
   padding: 5px;
@@ -335,50 +420,67 @@ a {
   background-color: transparent !important;
   -webkit-appearance: none !important;
 }
+
 .AllSelect .select3 #location:focus {
   border: 0.1px solid rgba(73, 73, 73, 0.29) !important;
   outline: none;
 }
+
 .AllSelect .select3 .selection__clear {
   font-size: 1.2vw !important;
 }
+
 .AllSelect .select3 ul {
   border: 1px solid #e6e6e6;
-  box-shadow: 0 2px 10px rgba(24, 50, 71, 0.2);
+  -webkit-box-shadow: 0 2px 10px #152d3d2d;
+          box-shadow: 0 2px 10px #152d3d2d;
   border-radius: 0 0 8px 8px;
   margin: 0;
   padding: 0;
   background-color: white;
 }
+
 .AllSelect .select3 ul li {
   cursor: pointer;
   list-style: none;
   padding: 15px;
   color: rgba(0, 0, 0, 0.602);
   font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .AllSelect .select3 ul li h3 {
   font-size: 0.78vw;
   font-family: "Roboto";
 }
+
 .AllSelect .select3 ul li .icon-tick {
   font-size: 1vw;
   display: none;
 }
+
 .AllSelect .select3 ul li .icon-tick svg {
   width: 13px !important;
   height: 13px !important;
 }
+
 .AllSelect .select3 ul li:hover {
   color: rgba(0, 0, 0, 0.823);
   font-weight: 500;
 }
+
 .AllSelect .select3 .noShow {
   display: none;
 }
+
 .AllSelect .selInp {
   width: 32.5% !important;
   height: 5.5vh !important;
@@ -386,12 +488,16 @@ a {
   top: 0;
   left: 0;
 }
-.AllSelect .selInp span[data-select-id="1"], .AllSelect .selInp span[data-select-id="2"], .AllSelect .selInp span[data-select-id="3"] {
+
+.AllSelect .selInp span[data-select-id="1"],
+.AllSelect .selInp span[data-select-id="2"],
+.AllSelect .selInp span[data-select-id="3"] {
   display: none;
   position: absolute;
   top: 48%;
   left: 87%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-size: 1vw;
   font-weight: 700;
   opacity: 0.9;
@@ -399,28 +505,41 @@ a {
   z-index: 999;
   width: 20px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.5019607843);
+  background-color: #ffffff80;
   height: 24px;
 }
 
 .toggle-and-clear {
   width: 35%;
   height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .toggle-and-clear .remote-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 50%;
 }
+
 .toggle-and-clear .remote-toggle span {
   font-size: 0.9vw !important;
   font-family: "Roboto";
   font-weight: 400;
   text-align: start;
 }
+
 .toggle-and-clear .remote-toggle .toggle-switch {
   width: 20%;
   display: inline-block;
@@ -428,6 +547,7 @@ a {
   cursor: pointer;
   top: 5px;
 }
+
 .toggle-and-clear .remote-toggle .toggle-switch .toggle-btn {
   position: absolute;
   opacity: 0;
@@ -437,6 +557,7 @@ a {
   z-index: 9;
   left: 0;
 }
+
 .toggle-and-clear .remote-toggle .toggle-switch label {
   position: relative;
   cursor: pointer;
@@ -450,9 +571,11 @@ a {
   border-radius: 10px;
   margin: 0;
 }
+
 .toggle-and-clear .remote-toggle .toggle-switch .toggle-btn:checked + label::before {
   background-color: #5cb46b;
 }
+
 .toggle-and-clear .remote-toggle .toggle-switch .toggle-btn + label::before {
   top: 2px;
   left: 2px;
@@ -460,16 +583,20 @@ a {
   right: 2px;
   background-color: #a0a0a0;
   border-radius: 10px;
-  transition: background 0.4s;
+  -webkit-transition: background .4s;
+  transition: background .4s;
 }
+
 .toggle-and-clear .remote-toggle .toggle-switch .toggle-btn + label::after, .toggle-and-clear .remote-toggle .toggle-switch .toggle-btn + label::before {
   display: block;
   position: absolute;
-  content: "";
+  content: '';
 }
+
 .toggle-and-clear .remote-toggle .toggle-switch .toggle-btn:checked + label::after {
   margin-left: 16px;
 }
+
 .toggle-and-clear .remote-toggle .toggle-switch .toggle-btn + label::after {
   top: 4px;
   left: 4px;
@@ -477,28 +604,36 @@ a {
   width: 12px;
   background-color: #fff;
   border-radius: 50%;
-  transition: margin 0.4s, background 0.4s;
+  -webkit-transition: margin .4s, background .4s;
+  transition: margin .4s, background .4s;
 }
+
 .toggle-and-clear .remote-toggle .toggle-switch .toggle-btn + label::after, .toggle-and-clear .remote-toggle .toggle-switch .toggle-btn + label::before {
   display: block;
   position: absolute;
-  content: "";
+  content: '';
 }
+
 .toggle-and-clear .clear-text {
   display: none;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 10px;
   text-align: center;
   margin-top: 2px;
   border-left: 1px solid #dadee4;
 }
+
 .toggle-and-clear .clear-text button {
   text-align: center;
   color: #73469B;
   vertical-align: middle;
   font-family: "Roboto";
-  font-size: 1vw;
+  font-size: 0.95vw !important;
   font-weight: 600;
   background: none;
   border: none;
@@ -509,6 +644,7 @@ a {
   position: relative;
   z-index: 1 !important;
 }
+
 .input-field .search_input {
   z-index: 0 !important;
   height: 40px;
@@ -522,18 +658,25 @@ a {
   font-size: 14px;
   background-image: none;
   border-radius: 4px;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
 }
+
 .input-field .search_input:focus {
   outline: none;
   border: 1px solid rgba(8, 8, 8, 0.498);
 }
+
 .input-field .icon-search {
   position: absolute;
   top: 11px;
   left: 10px;
   color: #79888E;
 }
+
 .input-field .close-icon {
   display: none;
   border: 0;
@@ -548,11 +691,14 @@ a {
   margin: 0;
   padding: 0;
 }
+
 .ul .role-title {
   margin: -20px 0 0;
   padding: 20px 0 0;
+  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
+
 .ul .role-title h5 {
   display: inline-block;
   margin-bottom: 20px;
@@ -560,6 +706,7 @@ a {
   font-size: 22px;
   color: #7B40A0;
 }
+
 .ul .role-title .role-count {
   background-color: #e6e6e6;
   float: right;
@@ -568,18 +715,21 @@ a {
   border-radius: 25px;
   margin-right: 30px;
 }
+
 .ul li {
   padding: 15px 0;
   list-style: none;
-  border-top: 1px solid #e6e6e6 !important;
+  border-top: 1px solid  #e6e6e6 !important;
   cursor: pointer;
 }
+
 .ul li .job-list {
   list-style: none;
   margin: 0;
   padding: 0;
   color: black;
 }
+
 .ul li .job-list .heading {
   padding: 20px 20px 20px 30px;
   border-radius: 4px;
@@ -588,10 +738,16 @@ a {
   color: #000 !important;
   text-decoration: none !important;
 }
+
 .ul li .job-list .heading .info {
-  flex-wrap: nowrap !important;
-  flex-direction: row;
+  -ms-flex-wrap: nowrap !important;
+      flex-wrap: nowrap !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
+
 .ul li .job-list .heading .info .jobInfo {
   float: left;
   position: relative;
@@ -600,6 +756,7 @@ a {
   padding-right: 15px;
   width: 70%;
 }
+
 .ul li .job-list .heading .info .jobInfo .job_title {
   font-size: 1.2vw !important;
   margin-bottom: 10px;
@@ -607,12 +764,14 @@ a {
   font-weight: 600;
   font-family: "Roboto";
 }
+
 .ul li .job-list .heading .info .jobInfo .job_desc {
   color: #333 !important;
   text-decoration: none !important;
   font-size: 0.8vw !important;
   font-family: "Roboto";
 }
+
 .ul li .job-list .heading .info .job-location {
   text-align: right;
   padding: 25px 10px;
@@ -623,18 +782,27 @@ a {
   padding-left: 15px;
   padding-right: 15px;
   width: 30% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .ul li .job-list .heading .info .job-location .location-info, .ul li .job-list .heading .info .job-location .location-icon {
   display: inline-block;
   vertical-align: middle;
   color: inherit;
 }
+
 .ul li .job-list .heading .info .job-location .location-info {
   color: #0070d0;
 }
+
 .ul li .job-list .heading .info .job-location .location-icon I {
   color: #7b40a0;
 }
@@ -643,6 +811,7 @@ a {
   text-align: center;
   margin-top: 36px;
 }
+
 .no-jobs-found .no-jobs-icon {
   margin: 0 auto;
   padding: 32px;
@@ -653,11 +822,13 @@ a {
   font-size: 36px;
   color: #79888E;
 }
+
 .no-jobs-found .not-found-title {
   font-size: 20px;
   font-weight: 600;
   margin: 24px 0 8px 0;
 }
+
 .no-jobs-found p {
   margin: 0 0 10px;
   font-size: 13px !important;
@@ -677,6 +848,7 @@ a {
     z-index: 18;
   }
 }
+
 @media only screen and (max-width: 1440px) {
   .toggle-and-clear .remote-toggle span {
     font-size: 1vw !important;
@@ -685,6 +857,7 @@ a {
     font-size: 1vw !important;
   }
 }
+
 @media only screen and (max-width: 768px) {
   .toggle-and-clear .remote-toggle span {
     font-size: 1.2vw !important;
@@ -693,8 +866,11 @@ a {
     z-index: 17;
   }
   .dis_moible {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .dis_moible .AllSelect .selInp {
     position: relative;
@@ -707,7 +883,7 @@ a {
   .dis_moible .AllSelect .selInp ul {
     position: relative;
     z-index: 20 !important;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
   }
   .dis_moible .AllSelect .selInp ul li h3 {
     font-size: 1.5vw !important;
@@ -718,9 +894,15 @@ a {
   .dis_moible .toggle-and-clear {
     width: 50%;
     height: 5vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-left: 0.2rem !important;
   }
   .dis_moible .toggle-and-clear span {
@@ -733,7 +915,10 @@ a {
     height: 18px;
   }
   .ul li .job-list .show .info {
-    flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
   .ul li .job-list .show .info .jobInfo {
     margin: 5px 0;
@@ -751,7 +936,9 @@ a {
     max-width: 100% !important;
     width: 100% !important;
     text-align: start !important;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     border-top: 1px solid #dadee4;
     padding-block: 15px !important;
   }
@@ -775,17 +962,25 @@ a {
     font-size: 2.2vw;
   }
 }
+
 @media only screen and (max-width: 570px) {
   .title_job h3 {
     font-size: 3vw !important;
   }
   .dis_moible {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .dis_moible .AllSelect {
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -ms-flex-wrap: nowrap !important;
+        flex-wrap: nowrap !important;
     height: auto !important;
   }
   .dis_moible .AllSelect .selInp {
@@ -802,7 +997,7 @@ a {
   .dis_moible .AllSelect .selInp ul {
     position: relative;
     z-index: 20 !important;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
   }
   .dis_moible .AllSelect .selInp ul li h3 {
     font-size: 2vw !important;
@@ -814,9 +1009,15 @@ a {
     width: 45%;
     height: 5vh;
     margin-top: 4%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-left: 0.2rem !important;
   }
   .dis_moible .toggle-and-clear span {
@@ -856,7 +1057,10 @@ a {
     background-color: white;
   }
   .ul li .job-list .show .info {
-    flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
   .ul li .job-list .show .info .jobInfo {
     margin: 5px 0;
@@ -874,7 +1078,9 @@ a {
     max-width: 100% !important;
     width: 100% !important;
     text-align: start !important;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     border-top: 1px solid #dadee4;
     padding-block: 15px !important;
   }
@@ -895,17 +1101,25 @@ a {
     font-size: 2.2vw;
   }
 }
+
 @media only screen and (max-width: 425px) {
   .title_job h3 {
     font-size: 3vw !important;
   }
   .dis_moible {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .dis_moible .AllSelect {
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -ms-flex-wrap: nowrap !important;
+        flex-wrap: nowrap !important;
     height: auto !important;
   }
   .dis_moible .AllSelect .selInp {
@@ -922,7 +1136,7 @@ a {
   .dis_moible .AllSelect .selInp ul {
     position: relative;
     z-index: 20 !important;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
   }
   .dis_moible .AllSelect .selInp ul li h3 {
     font-size: 2vw !important;
@@ -934,9 +1148,15 @@ a {
     width: 45%;
     height: 5vh;
     margin-top: 4%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-left: 0.2rem !important;
   }
   .dis_moible .toggle-and-clear span {
@@ -976,7 +1196,10 @@ a {
     background-color: white;
   }
   .ul li .job-list .show .info {
-    flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
   .ul li .job-list .show .info .jobInfo {
     margin: 5px 0;
@@ -994,7 +1217,9 @@ a {
     max-width: 100% !important;
     width: 100% !important;
     text-align: start !important;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     border-top: 1px solid #dadee4;
     padding-block: 15px !important;
   }
@@ -1015,23 +1240,29 @@ a {
     font-size: 2.2vw;
   }
 }
+
 .pageJob {
   height: auto;
   width: 100vw;
 }
+
 .pageJob .colorBac {
   background-color: #6A5376;
 }
+
 .pageJob .colorBac .NavpageJob .infoTitle .link-back {
   color: white !important;
 }
+
 .pageJob .colorBac .NavpageJob .infoTitle .link-back .fas {
   font-size: 1.1vw;
   margin-right: 5px;
 }
+
 .pageJob .colorBac .NavpageJob .btnFrom {
   color: white;
 }
+
 .pageJob .colorBac .NavpageJob .btnFrom .brand-color {
   margin-top: 0;
   font-size: 1.8vw;
@@ -1039,10 +1270,12 @@ a {
   font-weight: 700;
   letter-spacing: 0.8px;
 }
+
 .pageJob .colorBac .NavpageJob .btnFrom .stick-hide-in-mobile {
-  font-family: Source Sans Pro, sans-serif, "Helvetica Neue", Helvetica, Arial;
+  font-family: Source Sans Pro,sans-serif,"Helvetica Neue",Helvetica,Arial;
   font-size: 0.8vw;
 }
+
 .pageJob .colorBac .NavpageJob .btnFrom .btn-custom {
   color: #fff !important;
   background-color: #1ebea5;
@@ -1051,16 +1284,19 @@ a {
   font-size: 1.1vw;
   padding: 8px 29px;
 }
+
 .pageJob .colorBac .NavpageJob .btnFrom .btn-custom:hover {
   background-color: #57e4cf;
 }
+
 .pageJob .summary h6 {
   text-transform: capitalize;
   text-decoration: underline;
-  font-size: 0.8vw;
+  font-size: 0.85vw !important;
   font-family: "Roboto";
   font-weight: 600;
 }
+
 .pageJob .summary p {
   font-size: 0.75vw;
   letter-spacing: 0.3px;
@@ -1070,13 +1306,15 @@ a {
   margin: 0;
   width: 95%;
 }
+
 .pageJob .Responsibilities h6 {
   text-transform: capitalize;
   text-decoration: underline;
-  font-size: 0.8vw;
+  font-size: 0.85vw;
   font-family: "Roboto";
   font-weight: 600;
 }
+
 .pageJob .Responsibilities ul li {
   margin-block: 4px;
   font-size: 0.75vw;
@@ -1085,31 +1323,38 @@ a {
   letter-spacing: 0.5px;
   margin-left: 2.5vw;
 }
+
 .pageJob .application-form {
   display: none;
 }
+
 .pageJob .application-form h4 {
   color: #7b40a0;
   font-weight: 400;
   font-size: 1.3vw;
   letter-spacing: 0.8px;
 }
+
 .pageJob .application-form .application-btn {
   margin: 30px 0;
 }
+
 .pageJob .application-form .application-btn .resume-upload {
   display: inline-block;
   position: relative;
 }
+
 .pageJob .application-form .application-btn .resume-upload input {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
+
 .pageJob .application-form .application-btn .resume-upload input:hover {
   color: white !important;
   background: #1ebea5 !important;
 }
+
 .pageJob .application-form .application-btn .resume-upload .btn-primary {
   color: #1ebea5 !important;
   border-color: #1ebea5 !important;
@@ -1124,15 +1369,18 @@ a {
   word-break: break-all;
   text-overflow: ellipsis;
 }
+
 .pageJob .application-form .application-btn .resume-upload .btn-primary:hover {
   z-index: 0;
   color: white !important;
   background-color: #1ebea5 !important;
 }
+
 .pageJob .application-form .application-btn .resume-upload .btn-primary span {
   color: red;
   margin-left: 3px;
 }
+
 .pageJob .application-form .application-btn .resume-upload .upload-file {
   opacity: 0;
   overflow: hidden;
@@ -1142,22 +1390,26 @@ a {
   left: 0;
   top: 0;
   cursor: pointer;
-  z-index: 0;
+  z-index: 2;
 }
+
 .pageJob .application-form .application-btn .resume-upload .upload-file:focus {
   z-index: 1 !important;
   color: white !important;
   background: #1ebea5 !important;
 }
+
 .pageJob .application-form .application-btn .infoFrom {
   height: auto;
 }
+
 .pageJob .application-form .application-btn .infoFrom .form-group {
   margin-bottom: 15px;
   position: relative;
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
+
 .pageJob .application-form .application-btn .infoFrom .form-group label {
   background-color: #fff;
   font-weight: normal;
@@ -1169,14 +1421,17 @@ a {
   font-size: 0.7vw;
   z-index: 10;
 }
+
 .pageJob .application-form .application-btn .infoFrom .form-group label span {
   color: red;
 }
+
 .pageJob .application-form .application-btn .infoFrom .form-group .form-control {
   color: #333;
   background: #fff;
   border: 1px solid #c5c5c5;
 }
+
 .pageJob .application-form .application-btn .infoFrom .form-group .form-control {
   display: block;
   width: 100%;
@@ -1187,24 +1442,33 @@ a {
   background-image: none;
   border-radius: 4px;
   margin-top: -3px;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
 }
+
 .pageJob .application-form .application-btn .infoFrom .form-group .form-control:focus {
   outline: none !important;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: 1px solid #9040A0;
 }
+
 .pageJob .application-form .application-btn .infoFrom .section-group .link-label {
   font-size: 0.75vw;
   padding: 0;
   margin: 0 0 20px;
 }
+
 .pageJob .application-form .application-btn .infoFrom .section-group .link-label .link-label-title {
   font-size: 16px;
   padding: 0;
   margin: 25px 0 5px;
   font-weight: 600;
 }
+
 .pageJob .application-form .application-btn .infoFrom .section-group .link-group .form-group .form-control {
   padding: 8px;
   color: #333;
@@ -1212,11 +1476,14 @@ a {
   border: 1px solid #c5c5c5;
   height: 100%;
 }
+
 .pageJob .application-form .application-btn .infoFrom .section-group .link-group .form-group .form-control:focus {
   outline: none !important;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: 1px solid #9040A0;
 }
+
 .pageJob .application-form .application-btn .infoFrom .section-group .link-group .form-group .btn-add {
   padding: 3px !important;
   height: 100%;
@@ -1224,10 +1491,13 @@ a {
   background: #fff;
   border: 1px solid #c5c5c5;
 }
+
 .pageJob .application-form .application-btn .infoFrom .section-group .link-group .form-group .btn-add:focus {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: 1px solid #0a0a0a;
 }
+
 .pageJob .application-form .application-btn .btnSubm .btn-primary {
   margin-top: 25px;
   padding: 10px 5px;
@@ -1236,6 +1506,7 @@ a {
   background-color: #1ebea5;
   border-color: #1ebea5;
 }
+
 .pageJob .application-form .application-btn .btnSubm .btn-primary:hover {
   background-color: #5ae4cf;
   border-color: #5ee6d1;
@@ -1262,11 +1533,13 @@ a {
     padding: 10px 5px !important;
   }
 }
+
 .ring {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 150px;
   height: 150px;
   background: transparent;
@@ -1280,11 +1553,12 @@ a {
   letter-spacing: 4px;
   text-transform: uppercase;
   text-shadow: 0 0 10px #57E4CF;
-  box-shadow: 0 0 20px #6A5376;
+  -webkit-box-shadow: 0 0 20px #6A5376;
+          box-shadow: 0 0 20px #6A5376;
 }
 
 .ring:before {
-  content: "";
+  content: '';
   position: absolute;
   top: -3px;
   left: -3px;
@@ -1297,6 +1571,7 @@ a {
   -webkit-animation: animateC 2s linear infinite;
           animation: animateC 2s linear infinite;
 }
+
 .ring:before .Loading {
   display: block;
   position: absolute;
@@ -1305,12 +1580,14 @@ a {
   width: 50%;
   height: 4px;
   background: transparent;
-  transform-origin: left;
+  -webkit-transform-origin: left;
+          transform-origin: left;
   -webkit-animation: animate 2s linear infinite;
           animation: animate 2s linear infinite;
 }
+
 .ring:before .Loading .Loading:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 16px;
   height: 16px;
@@ -1318,37 +1595,51 @@ a {
   background: #fff000;
   top: -6px;
   right: -8px;
-  box-shadow: 0 0 20px #fff000;
+  -webkit-box-shadow: 0 0 20px #fff000;
+          box-shadow: 0 0 20px #fff000;
 }
+
 @-webkit-keyframes animateC {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
+
 @keyframes animateC {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes animate {
   0% {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
   }
   100% {
-    transform: rotate(405deg);
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
   }
 }
+
 @keyframes animate {
   0% {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
   }
   100% {
-    transform: rotate(405deg);
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+/*# sourceMappingURL=styles.css.map */
