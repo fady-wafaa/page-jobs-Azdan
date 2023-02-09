@@ -847,6 +847,12 @@ a {
   .select2 {
     z-index: 18;
   }
+  .AllSelect .selInp span[data-select-id="1"],
+  .AllSelect .selInp span[data-select-id="2"],
+  .AllSelect .selInp span[data-select-id="3"] {
+    -webkit-transform: translate(-50%, -45%) !important;
+            transform: translate(-50%, -45%) !important;
+  }
 }
 
 @media only screen and (max-width: 1440px) {
@@ -855,6 +861,11 @@ a {
   }
   .clear-text button {
     font-size: 1vw !important;
+  }
+  .AllSelect .selInp span[data-select-id="1"],
+  .AllSelect .selInp span[data-select-id="2"],
+  .AllSelect .selInp span[data-select-id="3"] {
+    top: 45% !important;
   }
 }
 
@@ -1521,6 +1532,11 @@ a {
   }
   .AllSelect .select3 .selection__clear, .AllSelect .select2 .selection__clear, .AllSelect .select1 .selection__clear {
     font-size: 1.5vw !important;
+  }
+  .AllSelect .selInp span[data-select-id="1"],
+  .AllSelect .selInp span[data-select-id="2"],
+  .AllSelect .selInp span[data-select-id="3"] {
+    top: 50% !important;
   }
   .application-btn .resume-upload .btn-primary {
     font-size: 1.1vw !important;

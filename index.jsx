@@ -9,118 +9,120 @@ const { useState, useEffect } = React;
 
 var GetData = [
   {
-    departmentT: "Project Management Office",
-    id: "1",
-    remote: true,
-    worktypeV: "1",
-    locationText: "remote",
-    reults: {
-      id: "1",
-      title: "ERP Project Manager",
-      descriptionT:
-        "Azdan ERP Project manager develops, plans, and implements successful planning and execution of Oracle NetSuite project, he/she makes decisions that directly benefit the project, control the risk and minimize uncertainty.\r\n\r\nAssumes an experienced level of project management, especially for complex nature, high values, and strategic projects",
-      locationText: "remote",
-      locationValue: "",
-      remote: true,
-      worktypeT: "Full-Time",
-      worktypeV: "1",
-      departmentT: "Project Management Office",
-      responsibilities:
-        "<ul><li>Understanding the project scope, schedule, and deliverables from the project manager</li><li>Working closely with Azdan consultants to recognize project needs and requirements.</li><li>Gather Project Requirements through meetings with the client and the internal function team.</li><li>Document all client meetings by the Minutes of the meeting document to be shared with the direct manager and the internal team.</li><li>Driving periodic project reviews and mitigating risks with due diligence and a data-driven approach</li><li>Contributing to the delivery of all aspects of the project and services: controlling and reporting on project activities and information security.</li><li>End-to-end program management – project initiation, planning, execution, control, and closure.</li><li>Applies a comprehensive understanding of NetSuite ERP foundational concepts and customer solutions</li><li>Cultivate relationships with team members, customer stakeholders and 3rd parties</li><li>Assign, disseminate, track, control and accept work to assigned parties within the Project scope.</li><li>Handling conflicts and ensuring project safe integration and delivery among various parties and stakeholders.</li><li>Conduct Project progress meetings, steering meetings and correspondences.</li><li>Influence project changes and enforces project change management procedures.</li><li>Maintain and professionally keep project documentation according to the Azdan PM policy and be prepared for projects audit.</li><li>Prepare all project-related reports such as project status, variance report, resources utilization, risk reports.</li><li>Reporting, analyzing, and resolving issues related to the implementation, stakeholders, and project operations that may impact service quality; ensuring that stakeholders’ questions and problems are resolved properly.</li><li>Improving support experience for quality results by studying, evaluating, and redesigning processes, establishing and communicating service metrics, monitoring and analyzing results, and implementing changes</li></ul>",
-      requirements:
-        '<ul><li style="text-align: justify;">Proven track record for planning, executing, controlling, and closing projects and the ability to manage NetSuite projects and their components simultaneously with minimal supervision.</li><li style="text-align: justify;">Experience in project management using waterfall methodology for medium to large-sized projects.</li><li style="text-align: justify;">Strong skills in creating and maintaining project and program plans, including risks, actions, and issues.</li><li style="text-align: justify;">Highly efficient in resource planning and tasks assigned.</li><li style="text-align: justify;">Knowledge of benefits and dependency mapping, risk management, and resource planning.</li><li style="text-align: justify;">Highly proficient IT skills in Word, Excel, PowerPoint, and MS projects.</li><li style="text-align: justify;">Line management or team leader experience.</li><li style="text-align: justify;">Excellent written/oral communication skills for reports and presentations.</li><li style="text-align: justify;">Diplomatic ability to influence others at all levels of the business.</li><li style="text-align: justify;">Strong and demonstrated ability to build lasting relationships with key stakeholders.</li><li style="text-align: justify;">Ability to competently mediate disagreements and negotiate agreeable resolutions</li></ul><div style="text-align: justify;">&nbsp;</div>',
-    },
-  },
-  {
-    departmentT: "NetSuite Department",
-    id: "2",
-    remote: true,
-    worktypeV: "1",
-    locationText: "remote",
-    reults: {
-      id: "2",
-      title: "NetSuite Principle Consultant (Remote)",
-      descriptionT:
-        "The role of the NetSuite Principle Consultant understands solutions, industry best practices, multiple business processes, or technology designs within a product/technology family. Operates independently to provide quality work products to an engagement. Performs varied and complex duties and tasks that need independent judgment, in order to implement NetSuite and technology to meet Client needs. Applies Oracle methodology, company procedures, and leading practices.",
-      locationText: "remote",
-      locationValue: "",
-      remote: true,
-      worktypeT: "Full-Time",
-      worktypeV: "1",
-      departmentT: "NetSuite Department",
-      responsibilities:
-        '<ul type="disc"><li style="text-align: justify;">Lead the NetSuite team</li><li style="text-align: justify;">&nbsp;Demonstrate an exceptional understanding of NetSuite ERP and finance systems</li><li style="text-align: justify;">Examine and extract customer data to formulate solutions</li><li style="text-align: justify;">&nbsp;Develop and execute efficient solutions that meet customer requirements</li><li style="text-align: justify;">&nbsp;Coordinate with the consulting team and 3rd party resources as required for project delivery</li><li style="text-align: justify;">Maintain relationships with internal and external stakeholders to best design immediate and future business goals</li><li style="text-align: justify;">Establish KPIs and metrics across the team to measure product performance.</li><li style="text-align: justify;">Own relationships with key business partners in Sales, Finance, and Operations and ensure that critical business requirements are being captured. Build and maintain the systems roadmap for your functional areas.</li><li style="text-align: justify;">Collaborate with other teams under Business Technology such as Integrations and Technical Team to develop comprehensive solutions.</li><li style="text-align: justify;">Perform all NetSuite management functions: performance reviews, staff calls, 1x1s, onboarding, career development, talent retention, motivation, etc.</li><li style="text-align: justify;">Communicate effectively with technical and non-technical audiences and develop and deliver engaging presentations that influence and persuade leadership on recommendations.</li><li style="text-align: justify;">&nbsp;Review program requirements and deployment plans/launch orchestration plans and provide appropriate recommendations to improve quality, de-risk, or preempt issues.</li><li style="text-align: justify;">Continually challenge the current model and methods: track productivity and quality metrics, and come up with creative ideas to improve the efficiency and effectiveness of the team for continuous improvement.</li><li style="text-align: justify;">Focus on Customer Success, Build for the Long Term, Adopt a Growth Mindset, Be Inclusive, and Win as a Team as we scale globally and across new offices.</li></ul><div style="text-align: justify;">&nbsp;</div>',
-      requirements:
-        '<div style="text-align: justify;"><ul type="disc"><li>Experience in managing the complete lifecycle of NetSuite projects with project teams of not less than 5 years.</li><li>Experience in project management using waterfall methodology for medium to large-sized projects.</li><li>Strong skills in creating and maintaining project and program plans, including risks, actions, and issues.</li><li>Highly efficient in resource planning and tasks assigned.</li><li>Knowledge of benefits and dependency mapping, risk management, and resource planning.</li><li>Highly proficient IT skills in Word, Excel, PowerPoint, and MS projects.</li><li>Line management or team leader experience.</li><li>Excellent written/oral communication skills for reports and presentations.</li><li>Diplomatic ability to influence others at all levels of the business.</li><li>Strong and demonstrated ability to build lasting relationships with key stakeholders.</li></ul><ul><li>Ability to competently mediate disagreements and negotiate agreeable resolutions.</li></ul></div>',
-    },
-  },
-  {
-    departmentT: "Engineering",
-    id: "3",
-    remote: true,
-    worktypeV: "1",
-    locationText: "remote",
-    reults: {
-      id: "3",
-      title: "Frontend Engineer",
-      descriptionT:
-        "Your primary focus will be on developing, testing, releasing, and maintaining our cross-functional platform’s frontend",
-      locationText: "remote",
-      locationValue: "",
-      remote: true,
-      worktypeT: "Full-Time",
-      worktypeV: "1",
-      departmentT: "Engineering",
-      responsibilities:
-        '<div block="" style="\\&quot;display:">&nbsp;</div><ul><li>Optimize applications for maximum speed</li><li>Design mobile-based features</li><li>Collaborate with back-end developers and web designers to improve the usability</li><li>Recommend appropriate technologies to implement new features.</li><li>Review code, layout, and design for projects before client meetings.</li><li>Build, deliver, and iterate to help scale projects.</li><li>Create new methods for improving efficiency.</li></ul><br><div block="" style="\\&quot;display:">&nbsp;</div>',
-      requirements:
-        '<div style="display: block; width: 0px; height: 0px; padding: 0px; border: 0px; margin: 0px; position: absolute; top: 0px; left: -9999px; opacity: 0; overflow: hidden;">&nbsp;</div><ul><li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">Strong experience with reactjs and nodejs React-native is a plus.</span></span></li><li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">Familiarity with bundling tools like Webpack.</span></span></li><li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">Familiarity with Task Runners like Gulp or Grunt.</span></span></li><li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">Knowledge in unit testing using Jest or Mocha.</span></span></li><li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">Ability to translate mockups into seamless web pages with perfect visual and functional elements.</span></span></li><li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">Experience in building large and modular codebases.</span></span></li><li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">Strong understanding of REST APIs and knowledge of how to interface with them.</span></span></li><li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">Bachelor\'s Degree in Computer Science, Engineering or equivalent field.</span></span></li><li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">3+ years of experience working in Front-End Development.</span></span></li></ul><ul><li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">1+ years of experience in React.js.</span></span></li></ul><br><br>&nbsp;<div style="display: block; width: 0px; height: 0px; padding: 0px; border: 0px; margin: 0px; position: absolute; top: 0px; left: -9999px; opacity: 0; overflow: hidden;">&nbsp;</div>',
-    },
-  },
-  {
-    departmentT: "Finance",
-    id: "4",
-    remote: false,
-    worktypeV: "2",
-    locationText: "Abu Dhabi, UAE",
-    reults: {
-      id: "4",
-      title: "NetSuite Principle Consultant",
-      descriptionT:
-        "The role of the NetSuite Principle Consultant understands solutions, industry best practices, multiple business processes, or technology designs within a product/technology family. Operates independently to provide quality work products to an engagement. Performs varied and complex duties and tasks that need independent judgment, in order to implement NetSuite and technology to meet Client needs. Applies Oracle methodology, company procedures, and leading practices.",
-      locationText: "Abu Dhabi, UAE",
-      locationValue: "4",
-      remote: false,
-      worktypeT: "Part-Time",
-      worktypeV: "2",
-      departmentT: "Finance",
-      responsibilities: "",
-      requirements:
-        "<ul><li>Experience in managing the complete lifecycle of NetSuite projects with project teams of not less than 5 years.</li><li>Experience in project management using waterfall methodology for medium to large-sized projects.</li><li>Strong skills in creating and maintaining project and program plans, including risks, actions, and issues.</li><li>Highly efficient in resource planning and tasks assigned.</li><li>Knowledge of benefits and dependency mapping, risk management, and resource planning.</li><li>Highly proficient IT skills in Word, Excel, PowerPoint, and MS projects.</li><li>Line management or team leader experience.</li><li>Excellent written/oral communication skills for reports and presentations.</li><li>Diplomatic ability to influence others at all levels of the business.</li><li>Strong and demonstrated ability to build lasting relationships with key stakeholders.</li><li>Ability to competently mediate disagreements and negotiate agreeable resolutions.</li></ul>",
-    },
-  },
-  {
-    departmentT: "Engineering",
-    id: "5",
-    remote: false,
-    worktypeV: "2",
-    locationText: "Alex, Egypt",
-    reults: {
-      id: "5",
-      title: "Senior Back End Developer",
-      descriptionT:
-        "We are looking for a highly skilled #Senior_Backend_Developer to join our company. In this role, you will use coding to operate back-end systems, write code optimized for mobile and develop databases and services for functionality.",
-      locationText: "Alex, Egypt",
-      locationValue: "2",
-      remote: false,
-      worktypeT: "Part-Time",
-      worktypeV: "2",
-      departmentT: "Engineering",
-      responsibilities: "",
-      requirements:
-        '<ul><li style="text-align: justify;">&nbsp;You have 3 years’ experience.</li><li style="text-align: justify;">&nbsp;S/MS degree in computer science, engineering or a related subject.</li><li style="text-align: justify;">&nbsp;Knowledge of non-relational database.</li><li style="text-align: justify;">&nbsp;Knowledge and experience in PHP/MYSQL.</li><li style="text-align: justify;">&nbsp;Proficient Understanding of MVC design patterns.</li><li style="text-align: justify;">- Knowledge of PHP web frameworks "Laravel".</li><li style="text-align: justify;">- Proficient understanding of front-end technologies, such as JavaScript, HTML5, and CSS3.</li><li style="text-align: justify;">&nbsp;Knowledge of Socket.io, Firebase.</li><li style="text-align: justify;">&nbsp;Database design.</li><li style="text-align: justify;">TechnoCloud is a holding company for (Tech Startups) that aims to get the maximum of tech solutions for a better world and easier life in different fields.</li><li style="text-align: justify;">Our Mission: to change the world\'s time-consuming processes through easy, smart and reliable tech apps.</li><li style="text-align: justify;">Our Vision: to become the house of world changers tech apps.</li><li style="text-align: justify;">Our Team &amp; Culture</li><li style="text-align: justify;">We are one family of passionate young professionals with a flat hierarchy and inclusive management approach.</li><li style="text-align: justify;">TechnoCloud is where each member\'s voice is valued &amp; respected and even fun is considered in our agenda!</li><li style="text-align: justify;">Energetic workspace: fun enabled, focus oriented, energetic workspace and eye relieving decoration is a plus benefit for every member at our premises.</li><li style="text-align: justify;">Opportunity: Our employees are our most valuable assets, What\'s in it for you?</li><li style="text-align: justify;">Good work-life balance &amp; friendly working hours</li><li style="text-align: justify;">Inspiring mobile apps we\'re proud of and definitely you will be!</li><li style="text-align: justify;">Promising career progression</li><li style="text-align: justify;">Challenging work where you will be always hungry to learn</li><li style="text-align: justify;">The ability to make a difference &amp; to add value to the society</li><li style="text-align: justify;">Competitive packages</li><li style="text-align: justify;">Social &amp; Medical insurance</li></ul>',
-    },
-  },
+    "departmentT": "Project Management Office",
+    "departmentV": "116",
+    "id": "1",
+    "remote": true,
+    "worktypeV": "1",
+    "locationText": "remote",
+    "locationValue": "100",
+    "reults": {
+        "id": "1",
+        "title": "ERP Project Manager",
+        "descriptionT": "Azdan ERP Project manager develops, plans, and implements successful planning and execution of Oracle NetSuite project, he/she makes decisions that directly benefit the project, control the risk and minimize uncertainty.\r\n\r\nAssumes an experienced level of project management, especially for complex nature, high values, and strategic projects",
+        "locationText": "remote",
+        "locationValue": "100",
+        "remote": true,
+        "worktypeT": "Full-Time",
+        "worktypeV": "1",
+        "departmentT": "Project Management Office",
+        "departmentV": "116",
+        "responsibilities": "<ul><li>Understanding the project scope, schedule, and deliverables from the project manager</li><li>Working closely with Azdan consultants to recognize project needs and requirements.</li><li>Gather Project Requirements through meetings with the client and the internal function team.</li><li>Document all client meetings by the Minutes of the meeting document to be shared with the direct manager and the internal team.</li><li>Driving periodic project reviews and mitigating risks with due diligence and a data-driven approach</li><li>Contributing to the delivery of all aspects of the project and services: controlling and reporting on project activities and information security.</li><li>End-to-end program management – project initiation, planning, execution, control, and closure.</li><li>Applies a comprehensive understanding of NetSuite ERP foundational concepts and customer solutions</li><li>Cultivate relationships with team members, customer stakeholders and 3rd parties</li><li>Assign, disseminate, track, control and accept work to assigned parties within the Project scope.</li><li>Handling conflicts and ensuring project safe integration and delivery among various parties and stakeholders.</li><li>Conduct Project progress meetings, steering meetings and correspondences.</li><li>Influence project changes and enforces project change management procedures.</li><li>Maintain and professionally keep project documentation according to the Azdan PM policy and be prepared for projects audit.</li><li>Prepare all project-related reports such as project status, variance report, resources utilization, risk reports.</li><li>Reporting, analyzing, and resolving issues related to the implementation, stakeholders, and project operations that may impact service quality; ensuring that stakeholders’ questions and problems are resolved properly.</li><li>Improving support experience for quality results by studying, evaluating, and redesigning processes, establishing and communicating service metrics, monitoring and analyzing results, and implementing changes</li></ul>",
+        "requirements": "<ul><li style=\"text-align: justify;\">Proven track record for planning, executing, controlling, and closing projects and the ability to manage NetSuite projects and their components simultaneously with minimal supervision.</li><li style=\"text-align: justify;\">Experience in project management using waterfall methodology for medium to large-sized projects.</li><li style=\"text-align: justify;\">Strong skills in creating and maintaining project and program plans, including risks, actions, and issues.</li><li style=\"text-align: justify;\">Highly efficient in resource planning and tasks assigned.</li><li style=\"text-align: justify;\">Knowledge of benefits and dependency mapping, risk management, and resource planning.</li><li style=\"text-align: justify;\">Highly proficient IT skills in Word, Excel, PowerPoint, and MS projects.</li><li style=\"text-align: justify;\">Line management or team leader experience.</li><li style=\"text-align: justify;\">Excellent written/oral communication skills for reports and presentations.</li><li style=\"text-align: justify;\">Diplomatic ability to influence others at all levels of the business.</li><li style=\"text-align: justify;\">Strong and demonstrated ability to build lasting relationships with key stakeholders.</li><li style=\"text-align: justify;\">Ability to competently mediate disagreements and negotiate agreeable resolutions</li></ul><div style=\"text-align: justify;\">&nbsp;</div>"
+    }
+},
+{
+    "departmentT": "Engineering",
+    "departmentV": "1",
+    "id": "3",
+    "remote": true,
+    "worktypeV": "1",
+    "locationText": "remote",
+    "locationValue": "100",
+    "reults": {
+        "id": "3",
+        "title": "Frontend Engineer",
+        "descriptionT": "Your primary focus will be on developing, testing, releasing, and maintaining our cross-functional platform’s frontend",
+        "locationText": "remote",
+        "locationValue": "100",
+        "remote": true,
+        "worktypeT": "Full-Time",
+        "worktypeV": "1",
+        "departmentT": "Engineering",
+        "departmentV": "1",
+        "responsibilities": "<div block=\"\" style=\"\\&quot;display:\">&nbsp;</div><ul><li>Optimize applications for maximum speed</li><li>Design mobile-based features</li><li>Collaborate with back-end developers and web designers to improve the usability</li><li>Recommend appropriate technologies to implement new features.</li><li>Review code, layout, and design for projects before client meetings.</li><li>Build, deliver, and iterate to help scale projects.</li><li>Create new methods for improving efficiency.</li></ul><br><div block=\"\" style=\"\\&quot;display:\">&nbsp;</div>",
+        "requirements": "<div style=\"display: block; width: 0px; height: 0px; padding: 0px; border: 0px; margin: 0px; position: absolute; top: 0px; left: -9999px; opacity: 0; overflow: hidden;\">&nbsp;</div><ul><li><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\">Strong experience with reactjs and nodejs React-native is a plus.</span></span></li><li><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\">Familiarity with bundling tools like Webpack.</span></span></li><li><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\">Familiarity with Task Runners like Gulp or Grunt.</span></span></li><li><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\">Knowledge in unit testing using Jest or Mocha.</span></span></li><li><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\">Ability to translate mockups into seamless web pages with perfect visual and functional elements.</span></span></li><li><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\">Experience in building large and modular codebases.</span></span></li><li><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\">Strong understanding of REST APIs and knowledge of how to interface with them.</span></span></li><li><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\">Bachelor's Degree in Computer Science, Engineering or equivalent field.</span></span></li><li><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\">3+ years of experience working in Front-End Development.</span></span></li></ul><ul><li><span style=\"font-size:11pt\"><span style=\"font-family:Calibri,sans-serif\">1+ years of experience in React.js.</span></span></li></ul><br><br>&nbsp;<div style=\"display: block; width: 0px; height: 0px; padding: 0px; border: 0px; margin: 0px; position: absolute; top: 0px; left: -9999px; opacity: 0; overflow: hidden;\">&nbsp;</div>"
+    }
+},
+{
+    "departmentT": "Finance",
+    "departmentV": "117",
+    "id": "4",
+    "remote": false,
+    "worktypeV": "2",
+    "locationText": "Abu Dhabi, UAE",
+    "locationValue": "4",
+    "reults": {
+        "id": "4",
+        "title": "NetSuite Principle Consultant",
+        "descriptionT": "The role of the NetSuite Principle Consultant understands solutions, industry best practices, multiple business processes, or technology designs within a product/technology family. Operates independently to provide quality work products to an engagement. Performs varied and complex duties and tasks that need independent judgment, in order to implement NetSuite and technology to meet Client needs. Applies Oracle methodology, company procedures, and leading practices.",
+        "locationText": "Abu Dhabi, UAE",
+        "locationValue": "4",
+        "remote": false,
+        "worktypeT": "Part-Time",
+        "worktypeV": "2",
+        "departmentT": "Finance",
+        "departmentV": "117",
+        "responsibilities": "",
+        "requirements": "<ul><li>Experience in managing the complete lifecycle of NetSuite projects with project teams of not less than 5 years.</li><li>Experience in project management using waterfall methodology for medium to large-sized projects.</li><li>Strong skills in creating and maintaining project and program plans, including risks, actions, and issues.</li><li>Highly efficient in resource planning and tasks assigned.</li><li>Knowledge of benefits and dependency mapping, risk management, and resource planning.</li><li>Highly proficient IT skills in Word, Excel, PowerPoint, and MS projects.</li><li>Line management or team leader experience.</li><li>Excellent written/oral communication skills for reports and presentations.</li><li>Diplomatic ability to influence others at all levels of the business.</li><li>Strong and demonstrated ability to build lasting relationships with key stakeholders.</li><li>Ability to competently mediate disagreements and negotiate agreeable resolutions.</li></ul>"
+    }
+},
+{
+    "departmentT": "NetSuite Department",
+    "departmentV": "115",
+    "id": "2",
+    "remote": true,
+    "worktypeV": "1",
+    "locationText": "remote",
+    "locationValue": "100",
+    "reults": {
+        "id": "2",
+        "title": "NetSuite Principle Consultant (Remote)",
+        "descriptionT": "The role of the NetSuite Principle Consultant understands solutions, industry best practices, multiple business processes, or technology designs within a product/technology family. Operates independently to provide quality work products to an engagement. Performs varied and complex duties and tasks that need independent judgment, in order to implement NetSuite and technology to meet Client needs. Applies Oracle methodology, company procedures, and leading practices.",
+        "locationText": "remote",
+        "locationValue": "100",
+        "remote": true,
+        "worktypeT": "Full-Time",
+        "worktypeV": "1",
+        "departmentT": "NetSuite Department",
+        "departmentV": "115",
+        "responsibilities": "<ul type=\"disc\"><li style=\"text-align: justify;\">Lead the NetSuite team</li><li style=\"text-align: justify;\">&nbsp;Demonstrate an exceptional understanding of NetSuite ERP and finance systems</li><li style=\"text-align: justify;\">Examine and extract customer data to formulate solutions</li><li style=\"text-align: justify;\">&nbsp;Develop and execute efficient solutions that meet customer requirements</li><li style=\"text-align: justify;\">&nbsp;Coordinate with the consulting team and 3rd party resources as required for project delivery</li><li style=\"text-align: justify;\">Maintain relationships with internal and external stakeholders to best design immediate and future business goals</li><li style=\"text-align: justify;\">Establish KPIs and metrics across the team to measure product performance.</li><li style=\"text-align: justify;\">Own relationships with key business partners in Sales, Finance, and Operations and ensure that critical business requirements are being captured. Build and maintain the systems roadmap for your functional areas.</li><li style=\"text-align: justify;\">Collaborate with other teams under Business Technology such as Integrations and Technical Team to develop comprehensive solutions.</li><li style=\"text-align: justify;\">Perform all NetSuite management functions: performance reviews, staff calls, 1x1s, onboarding, career development, talent retention, motivation, etc.</li><li style=\"text-align: justify;\">Communicate effectively with technical and non-technical audiences and develop and deliver engaging presentations that influence and persuade leadership on recommendations.</li><li style=\"text-align: justify;\">&nbsp;Review program requirements and deployment plans/launch orchestration plans and provide appropriate recommendations to improve quality, de-risk, or preempt issues.</li><li style=\"text-align: justify;\">Continually challenge the current model and methods: track productivity and quality metrics, and come up with creative ideas to improve the efficiency and effectiveness of the team for continuous improvement.</li><li style=\"text-align: justify;\">Focus on Customer Success, Build for the Long Term, Adopt a Growth Mindset, Be Inclusive, and Win as a Team as we scale globally and across new offices.</li></ul><div style=\"text-align: justify;\">&nbsp;</div>",
+        "requirements": "<div style=\"text-align: justify;\"><ul type=\"disc\"><li>Experience in managing the complete lifecycle of NetSuite projects with project teams of not less than 5 years.</li><li>Experience in project management using waterfall methodology for medium to large-sized projects.</li><li>Strong skills in creating and maintaining project and program plans, including risks, actions, and issues.</li><li>Highly efficient in resource planning and tasks assigned.</li><li>Knowledge of benefits and dependency mapping, risk management, and resource planning.</li><li>Highly proficient IT skills in Word, Excel, PowerPoint, and MS projects.</li><li>Line management or team leader experience.</li><li>Excellent written/oral communication skills for reports and presentations.</li><li>Diplomatic ability to influence others at all levels of the business.</li><li>Strong and demonstrated ability to build lasting relationships with key stakeholders.</li></ul><ul><li>Ability to competently mediate disagreements and negotiate agreeable resolutions.</li></ul></div>"
+    }
+},
+{
+    "departmentT": "Engineering",
+    "departmentV": "1",
+    "id": "5",
+    "remote": false,
+    "worktypeV": "2",
+    "locationText": "Alex, Egypt",
+    "locationValue": "2",
+    "reults": {
+        "id": "5",
+        "title": "Senior Back End Developer",
+        "descriptionT": "We are looking for a highly skilled #Senior_Backend_Developer to join our company. In this role, you will use coding to operate back-end systems, write code optimized for mobile and develop databases and services for functionality.",
+        "locationText": "Alex, Egypt",
+        "locationValue": "2",
+        "remote": false,
+        "worktypeT": "Part-Time",
+        "worktypeV": "2",
+        "departmentT": "Engineering",
+        "departmentV": "1",
+        "responsibilities": "",
+        "requirements": "<ul><li style=\"text-align: justify;\">&nbsp;You have 3 years’ experience.</li><li style=\"text-align: justify;\">&nbsp;S/MS degree in computer science, engineering or a related subject.</li><li style=\"text-align: justify;\">&nbsp;Knowledge of non-relational database.</li><li style=\"text-align: justify;\">&nbsp;Knowledge and experience in PHP/MYSQL.</li><li style=\"text-align: justify;\">&nbsp;Proficient Understanding of MVC design patterns.</li><li style=\"text-align: justify;\">- Knowledge of PHP web frameworks \"Laravel\".</li><li style=\"text-align: justify;\">- Proficient understanding of front-end technologies, such as JavaScript, HTML5, and CSS3.</li><li style=\"text-align: justify;\">&nbsp;Knowledge of Socket.io, Firebase.</li><li style=\"text-align: justify;\">&nbsp;Database design.</li><li style=\"text-align: justify;\">TechnoCloud is a holding company for (Tech Startups) that aims to get the maximum of tech solutions for a better world and easier life in different fields.</li><li style=\"text-align: justify;\">Our Mission: to change the world's time-consuming processes through easy, smart and reliable tech apps.</li><li style=\"text-align: justify;\">Our Vision: to become the house of world changers tech apps.</li><li style=\"text-align: justify;\">Our Team &amp; Culture</li><li style=\"text-align: justify;\">We are one family of passionate young professionals with a flat hierarchy and inclusive management approach.</li><li style=\"text-align: justify;\">TechnoCloud is where each member's voice is valued &amp; respected and even fun is considered in our agenda!</li><li style=\"text-align: justify;\">Energetic workspace: fun enabled, focus oriented, energetic workspace and eye relieving decoration is a plus benefit for every member at our premises.</li><li style=\"text-align: justify;\">Opportunity: Our employees are our most valuable assets, What's in it for you?</li><li style=\"text-align: justify;\">Good work-life balance &amp; friendly working hours</li><li style=\"text-align: justify;\">Inspiring mobile apps we're proud of and definitely you will be!</li><li style=\"text-align: justify;\">Promising career progression</li><li style=\"text-align: justify;\">Challenging work where you will be always hungry to learn</li><li style=\"text-align: justify;\">The ability to make a difference &amp; to add value to the society</li><li style=\"text-align: justify;\">Competitive packages</li><li style=\"text-align: justify;\">Social &amp; Medical insurance</li></ul>"
+    }
+}
 ];
 
 
@@ -475,27 +477,12 @@ const OneJob = ({ data }) => {
 };
 
 // ! ===============>> UL Array <==> jobs <<=======
-const ContainerUl = ({ ArrDepar, data, arrDepar }) => {
+const ContainerUl = ({  arrDepar ,ArrDepar ,data, arrfilter}) => {
 
-  const [arrdef, setArrDef] = useState({});
-  const [ArrDepar1, setArrDepar1] = useState(ArrDepar);
+
   let [load, setLoad] = useState(false);
-  let [loadNew, setLoadNew] = useState(false);
 
-  // console.log("ArrDepar",ArrDepar)
-  // console.log("data",data)
-  // console.log("arrDepar",arrDepar)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      let Res = GetData;
-      
-      setArrDef(Res);
-      setArrDepar1(arrDepar);
-      setLoadNew(true);
-    }, 1200);
-    
-    return () => clearTimeout(timer);
-  }, []);
+
   useEffect(() => {
     const timer = setTimeout(() => {
 
@@ -504,118 +491,104 @@ const ContainerUl = ({ ArrDepar, data, arrDepar }) => {
     
     return () => clearTimeout(timer);
   }, []);
-  
+
+  // console.log("arrfilter",arrfilter)
+
+  const RetUiData = (arrfilter)=>{
+      if(arrfilter.length > 0){
+        return(
+          ArrDepar.map((el, index) => (
+            <div>
+            {arrfilter.filter((e) => e.departmentT == el).length > 0 ?
+            (       // <ul className="ul">
+             <ul className="ul">
+                 <div className="role-title">
+                   <h5>{el}</h5>
+                   <div className="role-count">
+                     <span className="jobs-count pl-1 pr-2">
+                       {arrfilter.filter((e) => e.departmentT == el).length}
+                     </span>
+                     {/* <span data-portal-job-count="single-job">Open Role</span> */}
+                     <span className="multiple-job">Open Roles</span>
+                   </div>
+                 </div>
+                 {
+                   //    console.log( data.map( e => e.departmentT === el ? e : ""))
+                   arrfilter.map((e) =>
+                     e.departmentT === el ? <OneJob data={e} /> : ""
+                   )
+                 }
+               </ul>
+            )
+            :
+             (<div>
+               
+             </div>)
+           }
+            </div>
+     
+     
+             ))
+        )
+      }else if(arrfilter.length == 0){
+          return(
+            ArrDepar.map((el, index) => (
+              <div>
+              {data.filter((e) => e.departmentT == el).length > 0 ?
+              (       // <ul className="ul">
+               <ul className="ul">
+                   <div className="role-title">
+                     <h5>{el}</h5>
+                     <div className="role-count">
+                       <span className="jobs-count pl-1 pr-2">
+                         {data.filter((e) => e.departmentT == el).length}
+                       </span>
+                       {/* <span data-portal-job-count="single-job">Open Role</span> */}
+                       <span className="multiple-job">Open Roles</span>
+                     </div>
+                   </div>
+                   {
+                     //    console.log( data.map( e => e.departmentT === el ? e : ""))
+                     data.map((e) =>
+                       e.departmentT === el ? <OneJob data={e} /> : ""
+                     )
+                   }
+                 </ul>
+              )
+              :
+               (<div>
+                 
+               </div>)
+             }
+              </div>
+       
+       
+               ))
+          )
+      }
+      if(arrfilter === false){
+        return(
+          <div class="no-jobs-found" data-portal-id="no_data" >
+          <div class="no-jobs-icon">
+           <i class="icon-my-job"></i> 
+            <i class="fas fa-briefcase "></i>
+          </div>
+          <div class="not-found-title">No jobs found</div>
+          <p>Oops, you have no jobs that match the filter conditions.</p>
+          <p>Try refining your search.</p>
+        </div>
+        )
+      }
+  }
 
 
-  // console.log(renData )
+
   return (
     <React.Fragment>
-      <div className="container">
-        {data == false ? (
-             <div class="no-jobs-found" data-portal-id="no_data" >
-             <div class="no-jobs-icon">
-              <i class="icon-my-job"></i> 
-               <i class="fas fa-briefcase "></i>
-             </div>
-             <div class="not-found-title">No jobs found</div>
-             <p>Oops, you have no jobs that match the filter conditions.</p>
-             <p>Try refining your search.</p>
-           </div>
-        )
-      :
-      
-    <div>
+        <div className="container">
+            {RetUiData(arrfilter)}
 
-      {arrDepar.length == 0 ? (
-          <div>
-            {  ArrDepar.map((el, x) => (
-              <div>
-                {data.filter((e) => e.departmentT == el).length != 0 ? (
-                           <ul className="ul">
-                           <div className="role-title">
-                             <h5>{el}</h5>
-                             <div className="role-count">
-                               <span className="jobs-count pl-1 pr-2">
-                                 {data.filter((e) => e.departmentT == el).length}
-                               </span>
-                               {/* <span data-portal-job-count="single-job">Open Role</span> */}
-                               <span className="multiple-job">Open Roles</span>
-                             </div>
-                           </div>
-                           {
-                             //    console.log( data.map( e => e.departmentT === el ? e : ""))
-                             data.map((e) =>
-                               e.departmentT === el ? <OneJob data={e} /> : ""
-                             )
-                           }
-                         </ul>
-                )
-              : null
-              }
-              </div>
-     
-          ))}
-          </div>
-      ) 
-    :
-    (
-      <div>
-
-        {
-          loadNew == true ? (
-            arrDepar.map((el, index) => (
-           <div>
-           {data.filter((e) => e.departmentT == el).length > 0 ?
-           (       // <ul className="ul">
-            <ul className="ul">
-                <div className="role-title">
-                  <h5>{el}</h5>
-                  <div className="role-count">
-                    <span className="jobs-count pl-1 pr-2">
-                      {data.filter((e) => e.departmentT == el).length}
-                    </span>
-                    {/* <span data-portal-job-count="single-job">Open Role</span> */}
-                    <span className="multiple-job">Open Roles</span>
-                  </div>
-                </div>
-                {
-                  //    console.log( data.map( e => e.departmentT === el ? e : ""))
-                  data.map((e) =>
-                    e.departmentT === el ? <OneJob data={e} /> : ""
-                  )
-                }
-              </ul>
-           )
-           :
-            (<div>
-              
-            </div>)
-          }
-           </div>
-    
-    
-            ))
-     )
-          :
-          (
-            <div className="ring">
-            Loading
-            <span className="Loading"></span>
-          </div>
-    
-          )
-    
-        }
-      </div>
-    )
-    }
-    </div>
-      }
-
-
-
-
-      </div>
+        </div>
     </React.Fragment>
   );
 };
@@ -627,28 +600,147 @@ const ContainerUl = ({ ArrDepar, data, arrDepar }) => {
  * @returns 
  */
 const Positions = ({ ArrDepar, work, location, data }) => {
-
+  let paramsState = {
+      department : null,
+      work:null,
+      location:null
+  }
+  let [params, setParams] = useState(paramsState );
       let [checkTgg, setCheckTgg] = useState(true);
       const [newdata, setNewData] = useState(data);
       const [arrDepar, setArrDepar] = useState(ArrDepar);
+      const [arrfilter, setarrfilter] = useState([]);
       
+      /**
+       * @description 
+       * get data and setTimeout
+      */
 
-    /**
-     * @description 
-     * get data and setTimeout
-     */
+    
+       
+
       useEffect(() => {
-        const timer = setTimeout(() => {
-          let Res = GetData;
+        const timer =  setTimeout(() => 
+        {
 
-          setNewData(Res);
-        
-        }, 1000);
-
+          checkBeforeFilter(params)
+        },100
+        )
         return () => clearTimeout(timer);
-      }, []);
-   
+      }, [params]);
       
+
+
+      const handlerGetParm =(event , filterBy)=> {
+     
+
+        let val = event.currentTarget.value;
+       
+        if(!val){
+          setParams({...params.filter,[filterBy]:""})
+        }else{
+          if(filterBy == "department"){
+            valueSelect(1,event)
+            if(params.department ==val){
+              setParams({...params,[filterBy]:null})
+            }else{
+              setParams({...params,[filterBy]:val})
+
+            }
+          }else if(filterBy == "work"){
+            valueSelect(2,event)
+            if(params.work ==val){
+              setParams({...params,[filterBy]:null})
+            }else{
+              setParams({...params,[filterBy]:val})
+
+            }
+          }else if(filterBy == "location"){
+            valueSelect(3,event)
+            if(params.location ==val){
+              setParams({...params,[filterBy]:null})
+            }else{
+              setParams({...params,[filterBy]:val})
+
+            }
+          }
+        }
+        
+   
+        
+        
+      }
+      
+     
+      
+      const checkBeforeFilter = (params)=>{
+       
+     console.log(params.department)
+     console.log(params.work)
+     console.log(params.location)
+    
+          if(params.department == 999){
+                if(params.work !== null&& params.location !== null){
+                   setarrfilter( data.filter( e =>e.worktypeV == params.work &&  e.locationValue == params.location))
+                }else if(params.work !== null){
+                  setarrfilter(data.filter( e => e.worktypeV == params.work ))
+                }
+                else if(params.location !== null){
+                  setarrfilter(data.filter( e => e.locationValue == params.location ))
+                }
+                else{
+                  setarrfilter(data)
+                }
+                      
+
+          }else if(params.department !== 999 && params.department !== null){
+
+              if(params.work !== null&& params.location !== null){
+                let getRes = data.filter( e => e.departmentV == params.department  && e.worktypeV == params.work &&  e.locationValue == params.location)
+                  getRes.length > 0 ? setarrfilter(getRes ) : setarrfilter(false)
+            }else if(params.work !== null){
+             let getRes = data.filter( e => e.departmentV == params.department  && e.worktypeV == params.work )
+               getRes.length > 0 ? setarrfilter(getRes ) : setarrfilter(false)
+            }
+            else if(params.location !== null){
+              let getRes = data.filter( e => e.departmentV == params.department  && e.locationValue == params.location );
+              getRes.length > 0 ? setarrfilter(getRes ) : setarrfilter(false)
+            }
+            else{
+              let getRes = data.filter( e => e.departmentV == params.department  );
+              getRes.length > 0 ? setarrfilter(getRes ) : setarrfilter(false)
+            }
+   
+          }else if(params.department == null){
+
+            if(params.work !== null){
+              if( params.location === null){
+                
+                let getRes = data.filter( e =>  e.worktypeV == params.work);
+                getRes.length > 0 ? setarrfilter(getRes ) : setarrfilter(false)
+              }
+            }
+            if(params.location !== null){
+              if( params.work !== null){
+                let getRes =  data.filter( e =>  e.worktypeV == params.work &&  e.locationValue == params.location);
+                getRes.length > 0 ? setarrfilter(getRes ) : setarrfilter(false)
+              }else{
+                setarrfilter( data.filter( e =>  e.locationValue == params.location))
+              }
+            }
+          }
+          // if(params.department === null && params.work === null&& params.location === null){
+          //   console.log("fffffffffffffffffff",params)
+          //   console.log("fffffffffffffffffff",params.department)
+          //   setarrfilter(GetData)
+          // }
+
+          
+      }
+
+  
+     
+ 
 
       /**
        * @description function search job onkeyup=searchJob(value)
@@ -704,10 +796,19 @@ const Positions = ({ ArrDepar, work, location, data }) => {
             (el.style.fontSize = "0.78vw"),
             (el.style.color = "rgba(0, 0, 0, 0.602)"),
           ]);
+        
+          // setParams({...params,department:null})
+          // setTimeout(()=>{
 
-          setNewData(data);
-          setArrDepar(ArrDepar);
+          //   checkBeforeFilter(params)
+          // },500)
+          setarrfilter([])
+          setParams({...params,department:null})
+        // setParams({...params,department:null,work:null,location:null});
+     
         } else if (getValueAttr == 2) {
+          setarrfilter([])
+          setParams({...params,work:null})
           document
             .querySelector(`.sele2 .selection__clear`)
             .classList.remove("show");
@@ -722,9 +823,11 @@ const Positions = ({ ArrDepar, work, location, data }) => {
             (el.style.color = "rgba(0, 0, 0, 0.602)"),
           ]);
           // console.log("mmmm")
-          setNewData(data);
+          // setNewData(data);
           setArrDepar(ArrDepar);
         } else if (getValueAttr == 3) {
+          setarrfilter([])
+          setParams({...params,location:null})
           document
             .querySelector(`.sele3 .selection__clear`)
             .classList.remove("show");
@@ -738,8 +841,8 @@ const Positions = ({ ArrDepar, work, location, data }) => {
             (el.style.fontSize = "0.78vw"),
             (el.style.color = "rgba(0, 0, 0, 0.602)"),
           ]);
-          setNewData(data);
-          setArrDepar(ArrDepar);
+          // setNewData(data);
+          // setArrDepar(ArrDepar);
         }
       };
 
@@ -776,8 +879,9 @@ const Positions = ({ ArrDepar, work, location, data }) => {
       */
       const buttonRomtle = (e) => {
         if (checkTgg) {
-          let test = data.map((el) => el.remote == true ? el : null).filter((e) => e !== null);
-          setNewData(test)
+          let jobRomtle = data.map((el) => el.remote == true ? el : null).filter((e) => e !== null);
+          setarrfilter(jobRomtle)
+          setParams({...params,location:100})
           document.querySelector(".select3").style.display = "none";
           document.querySelector("#clear-text").style.display = "block";
           [...document.querySelectorAll(".selInp")].map((el) => [
@@ -796,7 +900,8 @@ const Positions = ({ ArrDepar, work, location, data }) => {
           document.querySelector(".AllSelect").classList.remove("pl-1");
           document.querySelector(".AllSelect").classList.add("pl-0");
         } else {
-          setNewData(data);
+          setarrfilter(data);
+          setParams({...params,department:null,work:null,location:null});
           [...document.querySelectorAll(".selInp")].map((el) => [
             el.classList.add("col-6"),
             (el.style.paddingLeft = 0),
@@ -824,10 +929,10 @@ const Positions = ({ ArrDepar, work, location, data }) => {
 
 
       /**
-      * function Clean Button
+      * function Clear Button
       * @returns 
       */
-      const CleanButton = () => {
+      const ClearButton = () => {
         document.querySelector(".AllSelect").classList.remove("pl-0");
         document.querySelector(".AllSelect").classList.add("pl-1");
         document.querySelector("#clear-text").style.display = "none";
@@ -854,8 +959,11 @@ const Positions = ({ ArrDepar, work, location, data }) => {
         [...document.querySelectorAll(".selInp")].map((e) =>
           e.classList.remove("col-6")
         );
-        setNewData(data);
-        return setCheckTgg(!checkTgg);
+       
+        setarrfilter([])
+        setParams({...params,department:null,work:null,location:null});
+        // checkBeforeFilter(clear)
+         setCheckTgg(!checkTgg);
       };
 
     
@@ -871,23 +979,29 @@ const Positions = ({ ArrDepar, work, location, data }) => {
         if (!e.currentTarget.querySelector("ul").classList.contains("noShow")) {
           e.currentTarget.querySelector("ul").classList.add("noShow");
         } else {
+          
           // if(!e.currentTarget.querySelector(".selection__clear ").classList.contains("show")){
           
           // }
           let chekUl = [...document.querySelectorAll(".selInp ul")].filter(
             (el) => el == e.currentTarget.querySelector("ul")
-          );
+            );
+
+
           chekUl.map((el) => el.classList.remove("noShow"));
         }
       };
 
       
+      
+
       /**
       * function get input value then search in data
       * filter input
       * @param {*}  
       */
-      const valueSelect = (e) => {
+      const valueSelect = (inputNume,e) => {
+
         if (
           !e.currentTarget.querySelector(".icon-tick").classList.contains("show")
         ) {
@@ -895,9 +1009,37 @@ const Positions = ({ ArrDepar, work, location, data }) => {
           e.currentTarget.querySelector("h3").classList.add("font-weight-bold");
           e.currentTarget.querySelector("h3").style.fontSize = "0.9vw";
           e.currentTarget.querySelector("h3").style.color = "rgba(0, 0, 0)";
+          if(inputNume == 2){
+            let inputTrget = document.querySelector(`.select2 input`);
+            inputTrget.value = `Work Type (${1})`;
+            inputTrget.style.color = "#000";
+          }
+          if(inputNume == 3){
+            let inputTrget = document.querySelector(`.select3 input`);
+            inputTrget.value = `Location (${1})`;
+            inputTrget.style.color = "#000";
+          }
         } else {
-          setNewData(data);
-          setArrDepar(ArrDepar);
+        
+          setarrfilter([])
+          setParams({...params,department:null,work:null,location:null});
+          
+          if(inputNume == 2){
+            let inputTrget = document.querySelector(`.select2 input`);
+            inputTrget.value = ``;
+            document
+            .querySelector(`.select2 .selection__clear`)
+            .classList.remove("show");
+            
+          }
+          if(inputNume == 3){
+            let inputTrget = document.querySelector(`.select3 input`);
+            inputTrget.value = ``;
+         
+            document
+              .querySelector(`.select3 .selection__clear`)
+              .classList.remove("show");
+          }
           //    GetData
           e.currentTarget.querySelector(".icon-tick").classList.remove("show");
           e.currentTarget.querySelector("h3").classList.remove("font-weight-bold");
@@ -906,92 +1048,14 @@ const Positions = ({ ArrDepar, work, location, data }) => {
           // ()=> setNewData(GetData)
         }
 
-        let valuable1 = document.querySelector(".sele1 #department").value;
-        let valuable2 = document.querySelector(".sele2 #working").value;
-        let valuable3 = document.querySelector(".sele3 #location").value;
-        let checkCliekOut1 = [...document.querySelectorAll(`.sele1 li span`)].map(
-          (el) => el.classList.contains("show")
-        );
-        let checkCliekOut2 = [...document.querySelectorAll(`.sele2 li span`)].map(
-          (el) => el.classList.contains("show")
-        );
-        let checkCliekOut3 = [...document.querySelectorAll(`.sele3 li span`)].map(
-          (el) => el.classList.contains("show")
-        );
-        let clieckNow = e.currentTarget.querySelector("h3").innerHTML;
+ 
+        // let clieckNow = e.currentTarget.querySelector("h3").innerHTML;
 
         
         //  ! === > check on cleck now <==
         let clieckNowInp = e.nativeEvent.composedPath()[2].classList[0];
         
-        if (clieckNowInp == "sele1") {
-          // console.log(e.nativeEvent.composedPath())
-          
-          
-          
-          let check = [...document.querySelectorAll(`.${clieckNowInp} .icon-tick`),].filter((el) => el.classList.contains("show"));
-          if(check.length > 0){
-            let getValueInpDepat = e.currentTarget.querySelector("h3").innerHTML ;
-            let filterDep = data.map((el) => el.departmentT == getValueInpDepat ? el : null).filter((e) => e !== null)
-            // let ArrDep = [...new Set(filterDep.map((e) => e.departmentT))];
-            // setArrDepar(filterDep);
-
-            setNewData(filterDep);         
-
-          }
-
-        }
-        if (clieckNowInp == "sele2") {
-          // console.log(e.nativeEvent.composedPath())
-          let checkMark = [...document.querySelectorAll(".sele2 .sele2 li .icon-tick")].filter((el) => el.classList.contains("show"));
-          if(checkMark.length > 0){
-              console.log("checkMark",checkMark);
-              [ ...document.querySelectorAll(".sele2 .sele2 li .icon-tick")].filter((el) => el.classList.remove("show"));
-            [...document.querySelectorAll(".sele2 .sele2 li h3")].filter((el) => el.classList.remove("font-weight-bold"));
-            [...document.querySelectorAll(".sele2 .sele2 li h3")].filter((el) => el.style.fontSize = "0.78vw");
-            [...document.querySelectorAll(".sele2 .sele2 li h3")].filter((el) => el.style.color = "rgba(0, 0, 0, 0.602)");
-            }
-       
-            e.currentTarget.querySelector(".icon-tick").classList.add("show");
-            e.currentTarget.querySelector("h3").classList.add("font-weight-bold");
-            e.currentTarget.querySelector("h3").style.fontSize = "0.9vw";
-            e.currentTarget.querySelector("h3").style.color = "rgba(0, 0, 0)";
-            // if (! e.currentTarget.querySelector(`.${clieckNowInp} ul li h3`).classList.contains("font-weight-bold")) {
-            //   console.log("fady")
-            // } 
-       
-            
-          
-            let inputTrget = document.querySelector(`.${clieckNowInp} input`);
-          let check = [...document.querySelectorAll(`.${clieckNowInp} .icon-tick`),].filter((el) => el.classList.contains("show"));
-          if(check.length > 0){
-            let getValueInpDepat = e.currentTarget.querySelector("h3").innerHTML ;
-            let filterDep = data.map((el) => el.reults.worktypeT == getValueInpDepat ? el : null).filter((e) => e !== null)
-       
-
-            setNewData(filterDep);         
-
-          }
-          inputTrget.value = `Work Type  (${check.length})`;
-          document
-            .querySelector(`.${clieckNowInp} .selection__clear`)
-            .classList.add("show");
-
-            [...document.querySelectorAll(`.${clieckNowInp} ul li `)].map((e) => [
-              e.querySelector(".icon-tick").classList.remove("show"),
-              (inputTrget.value = ``),
-              e.querySelector("h3").classList.remove("font-weight-bold"),
-              (e.querySelector("h3").style.fontSize = "0.78vw"),
-              (e.querySelector("h3").style.color = "rgba(0, 0, 0, 0.602"),
-            ]);
-            e.currentTarget.querySelector(".icon-tick").classList.add("show");
-            e.currentTarget.querySelector("h3").classList.add("font-weight-bold");
-            e.currentTarget.querySelector("h3").style.fontSize = "0.9vw";
-            e.currentTarget.querySelector("h3").style.color = "rgba(0, 0, 0)";
-            inputTrget.value = `Work Type (${1})`;
-        
-
-        }
+  
 
 
 
@@ -1000,31 +1064,18 @@ const Positions = ({ ArrDepar, work, location, data }) => {
         let inputTrget = document.querySelector(`.${clieckNowInp} input`);
         if (check.length > 0) {
           if (clieckNowInp == "sele1") {
-            // let filterDep = data.map(el => el.departmentT  === e.currentTarget.querySelector("h3").innerHTML ? el : null).filter(e => e!== null)
-            // setNewData(filterDep)
-            // let ArrDep = [...new Set(filterDep.map(e => e.departmentT ))];
-
-            //     setArrDepar(ArrDep)
+   
             let checkLI = e.currentTarget.value;
 
-            if (checkLI == 100) {
-              if(!e.currentTarget.querySelector(".icon-tick").classList.contains("show")){
-               
-                  setNewData(GetData)
-                  setArrDepar(ArrDepar)
-              }else{
-                  setNewData(GetData)
-                  setArrDepar(ArrDepar)
-              }
-
+            if (checkLI === 999) {
+              
               if ( document.querySelector(`.${clieckNowInp} ul li h3`).classList.contains("font-weight-bold")) {
+                inputTrget.style.color = "#000";
                 document
                   .querySelector(`.${clieckNowInp} .selection__clear`)
                   .classList.add("show");
 
-                inputTrget.value = `Department (${
-                  [...new Set(GetData.map((e) => e.departmentT))].length
-                })`;
+                inputTrget.value = `Department (${[...new Set(GetData.map((e) => e.departmentT))].length  })`;
                 [...document.querySelectorAll(`.${clieckNowInp} ul li `)].map((e) => [
                   e.querySelector(".icon-tick").classList.add("show"),
                   e.querySelector("h3").classList.add("font-weight-bold"),
@@ -1032,16 +1083,16 @@ const Positions = ({ ArrDepar, work, location, data }) => {
                   (e.querySelector("h3").style.color = "rgba(0, 0, 0)"),
                 ]);
               } else {
-                if (
-                  document
-                    .querySelector(`.${clieckNowInp} .selection__clear`)
-                    .classList.contains("show")
-                ) {
-                  document
+                inputTrget.style.color = "#888";
+                if (  document
+                  .querySelector(`.${clieckNowInp} .selection__clear`)
+                  .classList.contains("show") ) {
+                    document
                     .querySelector(`.${clieckNowInp} .selection__clear`)
                     .classList.remove("show");
-                }
-                inputTrget.value = ``;
+                    
+                  }
+                  inputTrget.value = ``;
                 [...document.querySelectorAll(`.${clieckNowInp} ul li `)].map((e) => [
                   e.querySelector("h3").classList.remove("font-weight-bold"),
                   (e.querySelector("h3").style.fontSize = "0.78vw"),
@@ -1050,6 +1101,8 @@ const Positions = ({ ArrDepar, work, location, data }) => {
                 ]);
               }
             } else if (checkLI == e.currentTarget.value) {
+              
+              
               document.querySelector(`.${clieckNowInp} .selection__clear`).classList.add("show");
               [...document.querySelectorAll(`.${clieckNowInp} ul li `)].map((e) => [
                 e.querySelector(".icon-tick").classList.remove("show"),
@@ -1063,6 +1116,8 @@ const Positions = ({ ArrDepar, work, location, data }) => {
               e.currentTarget.querySelector("h3").style.fontSize = "0.9vw";
               e.currentTarget.querySelector("h3").style.color = "rgba(0, 0, 0)";
               inputTrget.value = `Department (${1})`;
+              inputTrget.style.color = "#000";
+
             }
 
         
@@ -1071,16 +1126,27 @@ const Positions = ({ ArrDepar, work, location, data }) => {
           } 
      
           else if (clieckNowInp == "sele3") {
-            let check = [...document.querySelectorAll(`.${clieckNowInp} .icon-tick`),].filter((el) => el.classList.contains("show"));
-            if(check.length > 0){
-              let getValueInpDepat = e.currentTarget.querySelector("h3").innerHTML ;
-              let filterDep = data.map((el) => el.locationText == getValueInpDepat ? el : null).filter((e) => e !== null)
-              // let ArrDep = [...new Set(filterDep.map((e) => e.departmentT))];
-              // setArrDepar(filterDep);
-  
-              setNewData(filterDep);         
-  
-            }
+   
+            inputTrget.value = `Location (${check.length})`;
+            document
+              .querySelector(`.${clieckNowInp} .selection__clear`)
+              .classList.add("show");
+
+              [...document.querySelectorAll(`.${clieckNowInp} ul li `)].map((e) => [
+                e.querySelector(".icon-tick").classList.remove("show"),
+                (inputTrget.value = ``),
+                e.querySelector("h3").classList.remove("font-weight-bold"),
+                (e.querySelector("h3").style.fontSize = "0.78vw"),
+                (e.querySelector("h3").style.color = "rgba(0, 0, 0, 0.602"),
+              ]);
+              e.currentTarget.querySelector(".icon-tick").classList.add("show");
+              e.currentTarget.querySelector("h3").classList.add("font-weight-bold");
+              e.currentTarget.querySelector("h3").style.fontSize = "0.9vw";
+              e.currentTarget.querySelector("h3").style.color = "rgba(0, 0, 0)";
+              inputTrget.value = `Location (${1})`;
+          }
+          else if (clieckNowInp == "sele2") {
+ 
             inputTrget.value = `Location (${check.length})`;
             document
               .querySelector(`.${clieckNowInp} .selection__clear`)
@@ -1100,7 +1166,7 @@ const Positions = ({ ArrDepar, work, location, data }) => {
               inputTrget.value = `Location (${1})`;
           }
 
-          inputTrget.style.color = "#000";
+          // inputTrget.style.color = "#000";
         } else {
           inputTrget.value = ``;
           document
@@ -1109,6 +1175,8 @@ const Positions = ({ ArrDepar, work, location, data }) => {
         }
       };
 
+
+
       return (
         <React.Fragment>
           <div className="container">
@@ -1116,7 +1184,7 @@ const Positions = ({ ArrDepar, work, location, data }) => {
               <h3>Open Positions</h3>
             </div>
 
-            <div className="dis_moible container col-12 d-flex justify-content-start align-content-center p-0 mt-4 mb-3 flex-row flex-lg-row flex-md-column  flex-sm-column">
+            <div className="dis_moible container col-12 d-flex justify-content-start align-content-center p-0 mt-4 mb-m-3 mb-l-1 flex-row flex-lg-row flex-md-column  flex-sm-column">
               <div className="AllSelect  col-md-12  col-lg-9 pl-0 flex-md-row flex-sm-nowrap  flex-lg-nowrap">
                 <div
                   onClick={(e) => clickInpCleseUL(e)}
@@ -1140,8 +1208,8 @@ const Positions = ({ ArrDepar, work, location, data }) => {
                     className="department pl-3"
                   />
 
-                  <ul onMouseLeave={(e) => closeUl(e)} className="sele1 noShow">
-                    <li onClick={(e) => valueSelect(e)} key={100} value={100}>
+                  <ul onMouseLeave={(e) => closeUl(e)}  className="sele1 noShow">
+                    <li onClick={ (e)=>handlerGetParm(e, "department") }  key={999} value={999}>
                       <h3>All</h3>
                       <span class="icon-tick">
                         <svg
@@ -1161,9 +1229,9 @@ const Positions = ({ ArrDepar, work, location, data }) => {
                     {ArrDepar.length > 0
                       ? ArrDepar.map((el, index) => (
                           <li
-                            onClick={(e) => valueSelect(e)}
-                            key={index}
-                            value={index}
+                            onClick={ (e)=>handlerGetParm(e, "department")}
+                            key={data.map( e => e.departmentT == el ? e.departmentV : null).join(' ').trim()}
+                            value={data.map( e => e.departmentT == el ? e.departmentV : null).join(' ').trim()}
                           >
                             <h3>{el}</h3>
                             <span class="icon-tick">
@@ -1214,25 +1282,53 @@ const Positions = ({ ArrDepar, work, location, data }) => {
                   <ul onMouseLeave={(e) => closeUl(e)} className="sele2 noShow">
                     {work.length
                       ? work.map((el, index) => (
+                        <div>
+
+                          {el === "Full-Time" ?(
+  
+                            <li
+                              onClick={(e)=>handlerGetParm(e, "work")}
+                              key={1}
+                              value={1}
+                            >
+                              <h3>{el}</h3>
+                              <span class="icon-tick">
+                                <svg
+                                  viewBox="0 0 16 12"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2.18005 6.17997L5.18005 9.32997L14.1501 0.869974C14.4801 0.539973 15.0201 0.569974 15.3501 0.899974C15.68011.22997 15.6501 1.76997 15.3201 2.09997L5.72005 11.13C5.39005 11.46 4.85005 11.43 4.52005 11.1L0.950052 7.31997C0.6200526.98997 0.650052 6.44997 0.980052 6.11997C1.34005 5.81997 1.85005 5.81997 2.18005 6.17997Z"
+                                    fill="#183247"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </li>
+                          )
+                        :(
                           <li
-                            onClick={(e) => valueSelect(e)}
-                            key={index}
-                            value={index}
-                          >
-                            <h3>{el}</h3>
-                            <span class="icon-tick">
-                              <svg
-                                viewBox="0 0 16 12"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M2.18005 6.17997L5.18005 9.32997L14.1501 0.869974C14.4801 0.539973 15.0201 0.569974 15.3501 0.899974C15.68011.22997 15.6501 1.76997 15.3201 2.09997L5.72005 11.13C5.39005 11.46 4.85005 11.43 4.52005 11.1L0.950052 7.31997C0.6200526.98997 0.650052 6.44997 0.980052 6.11997C1.34005 5.81997 1.85005 5.81997 2.18005 6.17997Z"
-                                  fill="#183247"
-                                ></path>
-                              </svg>
-                            </span>
-                          </li>
+                          onClick={(e)=>handlerGetParm(e, "work")}
+                          key={2}
+                          value={2}
+                        >
+                          <h3>{el}</h3>
+                          <span class="icon-tick">
+                            <svg
+                              viewBox="0 0 16 12"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M2.18005 6.17997L5.18005 9.32997L14.1501 0.869974C14.4801 0.539973 15.0201 0.569974 15.3501 0.899974C15.68011.22997 15.6501 1.76997 15.3201 2.09997L5.72005 11.13C5.39005 11.46 4.85005 11.43 4.52005 11.1L0.950052 7.31997C0.6200526.98997 0.650052 6.44997 0.980052 6.11997C1.34005 5.81997 1.85005 5.81997 2.18005 6.17997Z"
+                                fill="#183247"
+                              ></path>
+                            </svg>
+                          </span>
+                        </li>
+                        )}
+                        </div>
+
                         ))
                       : null}
                   </ul>
@@ -1269,9 +1365,9 @@ const Positions = ({ ArrDepar, work, location, data }) => {
                     {location.length > 0
                       ? location.map((el, index) => (
                           <li
-                            onClick={(e) => valueSelect(e)}
+                            onClick={(e)=>handlerGetParm(e, "location")}
                             key={index}
-                            value={index}
+                            value={data.map( e => e.locationText == el ? e.reults.locationValue : null).join(' ').trim()}
                           >
                             <h3>{el}</h3>
                             <span class="icon-tick ">
@@ -1317,7 +1413,7 @@ const Positions = ({ ArrDepar, work, location, data }) => {
                   className="clear-text ml-xl-4 col-xl-3 col-md-3 p-0 ml-1"
                   id="clear-text"
                 >
-                  <button onClick={() => CleanButton()}>Clean</button>
+                  <button onClick={() => ClearButton()}>Clear</button>
                 </div>
               </div>
             </div>
@@ -1338,7 +1434,8 @@ const Positions = ({ ArrDepar, work, location, data }) => {
               </button>
             </div>
           </div>
-          <ContainerUl arrDepar={arrDepar} ArrDepar={ArrDepar} data={newdata} />
+         
+          <ContainerUl arrDepar={arrDepar} ArrDepar={ArrDepar} data={newdata.length == 0 ?  data : newdata} arrfilter={arrfilter} />
         </React.Fragment>
       );
 };
@@ -1379,32 +1476,38 @@ const Header = () => {
  */
 const Home = () => {
   const [data, setData] = useState([]);
-  const [ArrDepar, setArrDepar] = useState([]);
+  const [ArrDepar, setArrDepartment] = useState([]);
   const [work, setWork] = useState([]);
   const [location, setLocation] = useState([]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       let Res = GetData; //! ===> varebl in farst script in HTML <===
-
+      localStorage.setItem("data",JSON.stringify(Res))
       setData(Res);
       if (Res.length > 0) {
         let ArrDep = [...new Set(Res.map((e) => e.departmentT))];
-        setArrDepar(ArrDep);
+        setArrDepartment(ArrDep);
         let worktype = [...new Set(Res.map((e) => e.reults.worktypeT))];
         setWork(worktype);
-        let location = [
+        let locationFilter = [
           ...new Set(
             Res.map((e) => e.locationText).filter((e) => e.length !== 0)
-          ),
-        ];
+            ),
+          ];
+        
+          setLocation(locationFilter);
+        
+        }
+      }, 1000);
+      
+      return () => clearTimeout(timer);
+    }, []);
+   
 
-        setLocation(location);
-      }
-    }, 500);
 
-    return () => clearTimeout(timer);
-  }, []);
+    
+
 
   return (
     <div>

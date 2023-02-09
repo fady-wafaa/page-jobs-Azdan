@@ -775,6 +775,18 @@ a{
     .select2{
         z-index: 18;
     }
+    .AllSelect {
+
+       & .selInp{
+      
+            & span[data-select-id="1"] ,
+            & span[data-select-id="2"] ,
+            & span[data-select-id="3"] {
+               
+                transform: translate(-50%, -45%) !important;
+            }
+        }
+    }
 }
 @media only screen and (max-width: 1440px){
     .toggle-and-clear{
@@ -791,6 +803,19 @@ a{
             font-size: 1vw !important;
         }
     }
+    .AllSelect {
+
+        & .selInp{
+       
+             & span[data-select-id="1"] ,
+             & span[data-select-id="2"] ,
+             & span[data-select-id="3"] {
+                
+                 top: 45% !important;
+           
+             }
+         }
+     }
 }
 
 @media only screen and (max-width: 768px){
@@ -1541,7 +1566,18 @@ a{
                 font-size: 1.5vw !important;
              }
         }
+                & .selInp{
+       
+             & span[data-select-id="1"] ,
+             & span[data-select-id="2"] ,
+             & span[data-select-id="3"] {
+                
+                 top:50% !important;
+           
+             }
+         }
     }
+ 
     .application-btn{
 
        & .resume-upload{
